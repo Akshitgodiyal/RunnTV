@@ -4,6 +4,7 @@ import plusicon from '../../assets/images/plus-icon.png';
 import minusicon from '../../assets/images/minus-icon.png';
 import AreaSelector from '../../pages/viewership/dashboard-Map/AreaSelector';
 import { useSelector } from 'react-redux';
+import { formatNumber } from '../../service/commonFunc';
 
 function ActiveUser() {
   const [zoom, setZoom] = useState(1);
@@ -25,7 +26,7 @@ function ActiveUser() {
   const sortedData = formatData(MapDatastate).sort(
     (a, b) => b.population - a.population
   );
-
+// console.log("channelName",channelName);
   // Get the top 6 states
   const top6States = sortedData.slice(0, 6);
 
@@ -56,7 +57,7 @@ function ActiveUser() {
             {top6States.map(({ state, population }) => (
               <li key={state}>
                 <span>{state}</span>
-                <span>{population}</span>
+                <span>{formatNumber(population)}</span>
               </li>
             ))}
           </ul>

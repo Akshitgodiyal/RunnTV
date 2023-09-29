@@ -89,7 +89,7 @@ export const ViewershipTablehead = async (data) => {
     try {
       const response = await postData(URL, data)
       setTimeout(() => {
-        window.location.href = "/viewership"
+        window.location.href = "/"
       }, 1500);
       // return response;
     } catch (error) {

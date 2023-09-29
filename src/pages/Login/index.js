@@ -111,6 +111,7 @@ export default function Login() {
   };
 
   const LoginAPI = async () => {
+  
     let URL = Login_URL
     const data = {
       email: formData.username,
@@ -130,6 +131,8 @@ export default function Login() {
       if (response.status === 200 && response.data.success === true) {
         localStorage.setItem("accessToken", response.data?.data?.accessToken);
         localStorage.setItem("refreshToken", response.data?.data?.refreshToken);
+       
+        localStorage.setItem("userdetail",  JSON.stringify(response.data?.data?.user));
 
         if (rememberMe) {
           sessionStorage.setItem("email", formData.username);
@@ -143,9 +146,12 @@ export default function Login() {
           sessionStorage.removeItem("email");
           sessionStorage.removeItem("tok");
         }
-setTimeout(() => {
-  window.location.href = "/viewership"
-}, 1500);
+
+
+
+// setTimeout(() => {
+//   window.location.href = "/viewership"
+// }, 1500);
        
       
    

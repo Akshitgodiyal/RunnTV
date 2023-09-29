@@ -3,10 +3,12 @@ import { ViewershipMap, ViewershipTableChild } from "../../../api/api";
 import { useDispatch } from "react-redux";
 import { ChannelDataAction, MapDataAction } from "../../../Redux/slices";
 import { TimeConverter } from "../../../service/commonFunc";
+import rightarrow  from "../../../assets/images/caret-small-right.svg"
+import leftarrow  from "../../../assets/images/caret-small-left.svg"
 
 function AccordionChild({ data, filter, clickedData }) {
   const [programData, setProgramData] = useState([]);
-  const [itemsPerPage, setItemsPerPage] = useState(2);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
   const [totalShowLength, setTotalShowLength] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [options, setOptions] = useState([]);
@@ -87,7 +89,9 @@ if(filter?.viewType == "CHANNEL"){
 
   const handleItemsPerPageChange = (event) => {
     const newItemsPerPage = parseInt(event.target.value, 10);
-    setItemsPerPage(newItemsPerPage);
+    // Ensure the selected value is not greater than 30
+    const clampedItemsPerPage = Math.min(newItemsPerPage, 30);
+    setItemsPerPage(clampedItemsPerPage);
     setCurrentPage(1); // Reset currentPage to 1 when changing the number of items per page
   };
 
@@ -193,32 +197,36 @@ if(filter?.viewType == "CHANNEL"){
           </div>
         ))}
       </div>
+      
       {showPagination && (
-        <div className="pagination">
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-          >
-            Previous
-          </button>
-          {renderPaginationButtons()}
-          <button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-          >
-            Next
-          </button>
+        <div className="pagination pagination-table"  >
           <div className="items-per-page">
-            <label>Show items per page:</label>
-            <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
+            <label style={{color: '#333333', fontSize: 12, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Items per page:</label>
+            <select className="selectboxpage" value={itemsPerPage} onChange={handleItemsPerPageChange}>
               {options.map((option) => (
                 <option key={option} value={option}>
                   {option}
                 </option>
               ))}
-              <option value={totalShowLength}>All</option>
+              {/* <option value={totalShowLength}>All</option> */}
             </select>
+
+            
           </div>
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1} 
+          >
+            <img src={leftarrow} alt="rightarrow" />
+          </button>
+          {renderPaginationButtons()}
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages} 
+          >
+             <img src={rightarrow} alt="rightarrow" />
+          </button>
+          
         </div>
       )}
 

@@ -11,7 +11,7 @@ import { ChannelDataAction, MapDataAction } from "../../Redux/slices";
 import { ViewershipMap, ViewershipTableChild, ViewershipTablehead } from "../../api/api";
 import { TimeConverter, capitalizeFirstLetter } from "../../service/commonFunc";
 
-
+import filter_alt from "../../assets/images/sortarrow.png";
 
 function Viewership() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -138,21 +138,47 @@ function Viewership() {
           <div className="channel-table">
             <div className="channel-table-header">
               <div className="table-row  head" >
-                <div className="table-header-col name" onClick={()=>sortOrderEvent("")}>
+                <div className="table-header-col name" >
                   {capitalizeFirstLetter(filterVal.viewType)} Name
+
+            
+          <a  className='filter-icon mx-2' onClick={()=>sortOrderEvent("viewType")}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
+
+
                 </div>
-                <div className="table-header-col"onClick={()=>sortOrderEvent("numberOfActiveUsers")}>Active Users</div>
-                <div className="table-header-col"onClick={()=>sortOrderEvent("totalWatchHours")}>Total Watch Hours</div>
-                <div className="table-header-col"onClick={()=>sortOrderEvent("averageWatchTimePerUser")}>
-                  Avg - Watch Time Per User
+                <div className="table-header-col">Active Users
+                <a  className='filter-icon mx-2' onClick={()=>sortOrderEvent("numberOfActiveUsers")}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
+                
+                </div>
+                <div className="table-header-col">Total Watch Hours
+                <a  className='filter-icon mx-2'onClick={()=>sortOrderEvent("totalWatchHours")}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
+                </div>
+                <div className="table-header-col">
+                  Avg - Watch Time<a  className='filter-icon mx-2'onClick={()=>sortOrderEvent("averageWatchTimePerUser")}>
+            <img src={filter_alt} alt="Filter" />
+          </a> Per User  
                   <br />
                   <small>(HH:MM:SS)</small>
+                
                 </div>
                 <div className="table-header-col"onClick={()=>sortOrderEvent("averageWatchTimePerSession")}>
-                  Avg - Watch Time Per Session <br />
+                  Avg - Watch Time <a  className='filter-icon mx-2'onClick={()=>sortOrderEvent("averageWatchTimePerSession")}>
+            <img src={filter_alt} alt="Filter" />
+          </a> Per Session  <br />
                   <small>(HH:MM:SS)</small>
+                
                 </div>
-                <div className="table-header-col"onClick={()=>sortOrderEvent("totalAdImpression")}>Total Ad Impression</div>
+                <div className="table-header-col"onClick={()=>sortOrderEvent("totalAdImpression")}>Total Ad Impression
+                <a  className='filter-icon mx-2'onClick={()=>sortOrderEvent("totalAdImpression")}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
+                </div>
               </div>
             </div>
 

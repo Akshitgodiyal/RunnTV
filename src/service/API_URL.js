@@ -1,4 +1,4 @@
-export const baseURL = "https://714f-49-36-219-247.ngrok-free.app/runtv/v1"
+export const baseURL = "https://08c2-49-249-156-2.ngrok-free.app/runtv/v1"
 export const Login_URL = `${baseURL}/auth/login`;
 export const ForgetPassword_URL = `${baseURL}/password/resetlink`
 export const ResetPassword_URL = `${baseURL}/auth/password/reset`

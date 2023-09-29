@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 
 import india from './topojsons/india.json';
 import "./MapChart.scss"
+import { formatNumber } from "../../../service/commonFunc";
 
 const MapChart = ({ setTooltipContent, setStateName, setShowDistrict, setzoom }) => {
   const state = useSelector((state) => state);
@@ -133,7 +134,8 @@ const perce = stateInfo ? stateInfo?.activeUser : 0
       fill: "#000"
     }}
   >
-    {perce === 0 ? null : perce  + ""}
+    
+    {perce === 0 ? null : formatNumber(perce) + ""}
     </text>
   </Marker>
                   </g>

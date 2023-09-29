@@ -7,6 +7,8 @@ import info from "../../assets/images/info.svg";
 import power_settings_new from "../../assets/images/power_settings_new.svg";
 import logo from "../../assets/images/logo.png";
 import "./DashboardHeader.scss";
+import { Profile_data } from '../../service/Constant';
+import { Logout_Api } from '../../api/api';
 export default function DashboardHeader() {
   const [userActive, setUserActive] = useState(false);
 
@@ -34,6 +36,9 @@ export default function DashboardHeader() {
   };
 
   const formattedDate = formatDate(currentDate);
+
+
+
   return (
     <div className="dashboard-header">
       <div className="left-side">
@@ -43,7 +48,7 @@ export default function DashboardHeader() {
           </a>
         </div>
         <div className="welcome-name">
-          <h5>Welcome back, Manish Sinha</h5>
+          <h5>Welcome back, {Profile_data?.firstName} {Profile_data?.lastName}</h5>
           <div className="date">
             <span>{formattedDate}</span>
           </div>
@@ -56,14 +61,14 @@ export default function DashboardHeader() {
               className={`box ${userActive ? 'active' : 'no-active'}`}
               onClick={userDropdown}
             >
-              <div className="name">M</div>
+              <div className="name">{Profile_data?.firstName.charAt(0)}</div>
             </a>
             <div className={`dropdown ${userActive ? 'show' : 'no-show'}`}>
               <a className="close" onClick={userDropdownClose}>
                 Account
               </a>
               <ul>
-                <li>
+                {/* <li>
                   <a href="">
                     <img src={person} alt="My Profile" />My Profile
                   </a>
@@ -82,9 +87,9 @@ export default function DashboardHeader() {
                   <a href="">
                     <img src={info} alt="More Info" />More Info
                   </a>
-                </li>
+                </li> */}
                 <li>
-                  <a href="">
+                  <a onClick={()=>Logout_Api()}>
                     <img src={power_settings_new} alt="Logout" />Logout
                   </a>
                 </li>

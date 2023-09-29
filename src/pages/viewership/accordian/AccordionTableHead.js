@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import down_arrow from "../../../assets/images/down-arrow.svg";
-import filter_alt from "../../../assets/images/filter_alt.svg";
+import filter_alt from "../../../assets/images/sortarrow.png";
 import { TimeConverter } from '../../../service/commonFunc';
 
 function AccordionTableHead({ data, onTableHeadClick, onToggle }) {
   const TableHeadData = data;
   const [sortOrders, setSortOrders] = useState({}); // Store sorting orders for each column
 
-  const defaultSortColumn = "showName"; // Default sorting column
+  const defaultSortColumn = "viewKey"; // Default sorting column
 
   const toggleSortOrder = (columnValue) => {
-    const currentSortOrder = sortOrders[columnValue] || "showName"; // Default to "desc" if not set
+    const currentSortOrder = sortOrders[columnValue] || "viewKey"; // Default to "desc" if not set
     const newSortOrder = currentSortOrder === "asc" ? "desc" : "asc";
 
     // Update the sorting order for the clicked column
@@ -30,42 +30,59 @@ function AccordionTableHead({ data, onTableHeadClick, onToggle }) {
     <div className="table-row">
       <div className="table-col name" onClick={() => onToggle()}>
         <div className='icon'><img src={down_arrow} alt="Down Arrow" /></div>
-        <span onClick={(e) => { e.stopPropagation(); toggleSortOrder("showName"); }}>
+        <span  className='mx-2'>
           {TableHeadData?.viewKey}
         </span>
         <div className="filter-block">
-          {/* <a href='#' className='filter-icon'>
+          <a  className='filter-icon ' onClick={(e) => { e.stopPropagation(); toggleSortOrder("viewKey"); }}>
             <img src={filter_alt} alt="Filter" />
-          </a> */}
+          </a>
         </div>
       </div>
       <div className="table-col" onClick={() => onToggle()} >
-        <span onClick={(e) => { e.stopPropagation(); toggleSortOrder("numberOfActiveUsers") }}>
+        <span className='mx-2'>
           {TableHeadData?.numberOfActiveUsers}
         </span>
+    
+          <a  className='filter-icon ' onClick={(e) => { e.stopPropagation(); toggleSortOrder("numberOfActiveUsers") }}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
+    
       </div>
       <div className="table-col" onClick={() => onToggle()}>
-  <span onClick={(e) => { e.stopPropagation(); toggleSortOrder("totalWatchHours") }}>
+  <span className='mx-2' >
     {TableHeadData?.totalWatchHours.toFixed(2)} Hrs
   </span>
+  <a  className='filter-icon ' onClick={(e) => { e.stopPropagation(); toggleSortOrder("totalWatchHours") }}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
 </div>
 
 <div className="table-col" onClick={() => onToggle()}>
-  <span onClick={(e) => { e.stopPropagation(); toggleSortOrder("averageWatchTimePerUser") }}>
+  <span  className='mx-2'>
     {TimeConverter(TableHeadData?.averageWatchTimePerUser)}
   </span>
+  <a  onClick={(e) => { e.stopPropagation(); toggleSortOrder("averageWatchTimePerUser") }}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
 </div>
 
 <div className="table-col" onClick={() => onToggle()}>
-  <span onClick={(e) => { e.stopPropagation(); toggleSortOrder("averageWatchTimePerSession") }}>
+  <span  className='mx-2'>
     {TimeConverter(TableHeadData?.averageWatchTimePerSession)}
   </span>
+  <a   onClick={(e) => { e.stopPropagation(); toggleSortOrder("averageWatchTimePerSession") }}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
 </div>
 
 <div className="table-col" onClick={() => onToggle()}>
-  <span onClick={(e) => { e.stopPropagation(); toggleSortOrder("totalAdImpression") }}>
+  <span  className='mx-2'>
     {TableHeadData?.totalAdImpression}
   </span>
+  <a  onClick={(e) => { e.stopPropagation(); toggleSortOrder("totalAdImpression") }}>
+            <img src={filter_alt} alt="Filter" />
+          </a>
 </div>
 
     </div>
