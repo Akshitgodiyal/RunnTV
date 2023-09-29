@@ -1,0 +1,272 @@
+{
+    "TableHead": 
+    [
+        {
+            "channelName": "CookingWithChef",
+            "ActiveUser": "4567",
+            "TotalWatchHours": "205",
+            "AvgUserHours": "04:55:00",
+            "AvgSessionHours": "04:55:00",
+            "TotalAdd": "120",
+            "programdata": [
+                {
+                    "ShowName": "Chef 1",
+                    "ActiveUser": "4567",
+                    "TotalWatchHours": "205",
+                    "AvgUserHours": "04:55:00",
+                    "AvgSessionHours": "04:55:00",
+                    "TotalAdd": "120"
+                },
+                {
+                    "ShowName": "Chef 2",
+                    "ActiveUser": "7890",
+                    "TotalWatchHours": "320",
+                    "AvgUserHours": "05:20:00",
+                    "AvgSessionHours": "05:20:00",
+                    "TotalAdd": "150"
+                },
+                {
+                    "ShowName": "Chef 3",
+                    "ActiveUser": "1234",
+                    "TotalWatchHours": "150",
+                    "AvgUserHours": "03:45:00",
+                    "AvgSessionHours": "03:45:00",
+                    "TotalAdd": "90"
+                },
+                {
+                    "ShowName": "Chef 4",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "280",
+                    "AvgUserHours": "04:30:00",
+                    "AvgSessionHours": "04:30:00",
+                    "TotalAdd": "135"
+                }, {
+                    "ShowName": "Chef 1",
+                    "ActiveUser": "4567",
+                    "TotalWatchHours": "205",
+                    "AvgUserHours": "04:55:00",
+                    "AvgSessionHours": "04:55:00",
+                    "TotalAdd": "120"
+                },
+                {
+                    "ShowName": "Chef 2",
+                    "ActiveUser": "7890",
+                    "TotalWatchHours": "320",
+                    "AvgUserHours": "05:20:00",
+                    "AvgSessionHours": "05:20:00",
+                    "TotalAdd": "150"
+                },
+                {
+                    "ShowName": "Chef 3",
+                    "ActiveUser": "1234",
+                    "TotalWatchHours": "150",
+                    "AvgUserHours": "03:45:00",
+                    "AvgSessionHours": "03:45:00",
+                    "TotalAdd": "90"
+                },
+                {
+                    "ShowName": "Chef 4",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "280",
+                    "AvgUserHours": "04:30:00",
+                    "AvgSessionHours": "04:30:00",
+                    "TotalAdd": "135"
+                }, {
+                    "ShowName": "Chef 1",
+                    "ActiveUser": "4567",
+                    "TotalWatchHours": "205",
+                    "AvgUserHours": "04:55:00",
+                    "AvgSessionHours": "04:55:00",
+                    "TotalAdd": "120"
+                },
+                {
+                    "ShowName": "Chef 2",
+                    "ActiveUser": "7890",
+                    "TotalWatchHours": "320",
+                    "AvgUserHours": "05:20:00",
+                    "AvgSessionHours": "05:20:00",
+                    "TotalAdd": "150"
+                },
+                {
+                    "ShowName": "Chef 3",
+                    "ActiveUser": "1234",
+                    "TotalWatchHours": "150",
+                    "AvgUserHours": "03:45:00",
+                    "AvgSessionHours": "03:45:00",
+                    "TotalAdd": "90"
+                },
+                {
+                    "ShowName": "Chef 4",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "280",
+                    "AvgUserHours": "04:30:00",
+                    "AvgSessionHours": "04:30:00",
+                    "TotalAdd": "135"
+                }, {
+                    "ShowName": "Chef 1",
+                    "ActiveUser": "4567",
+                    "TotalWatchHours": "205",
+                    "AvgUserHours": "04:55:00",
+                    "AvgSessionHours": "04:55:00",
+                    "TotalAdd": "120"
+                },
+                {
+                    "ShowName": "Chef 2",
+                    "ActiveUser": "7890",
+                    "TotalWatchHours": "320",
+                    "AvgUserHours": "05:20:00",
+                    "AvgSessionHours": "05:20:00",
+                    "TotalAdd": "150"
+                },
+                {
+                    "ShowName": "Chef 3",
+                    "ActiveUser": "1234",
+                    "TotalWatchHours": "150",
+                    "AvgUserHours": "03:45:00",
+                    "AvgSessionHours": "03:45:00",
+                    "TotalAdd": "90"
+                },
+                {
+                    "ShowName": "Chef 4",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "280",
+                    "AvgUserHours": "04:30:00",
+                    "AvgSessionHours": "04:30:00",
+                    "TotalAdd": "135"
+                }, {
+                    "ShowName": "Chef 1",
+                    "ActiveUser": "4567",
+                    "TotalWatchHours": "205",
+                    "AvgUserHours": "04:55:00",
+                    "AvgSessionHours": "04:55:00",
+                    "TotalAdd": "120"
+                },
+                {
+                    "ShowName": "Chef 2",
+                    "ActiveUser": "7890",
+                    "TotalWatchHours": "320",
+                    "AvgUserHours": "05:20:00",
+                    "AvgSessionHours": "05:20:00",
+                    "TotalAdd": "150"
+                },
+                {
+                    "ShowName": "Chef 3",
+                    "ActiveUser": "1234",
+                    "TotalWatchHours": "150",
+                    "AvgUserHours": "03:45:00",
+                    "AvgSessionHours": "03:45:00",
+                    "TotalAdd": "90"
+                },
+                {
+                    "ShowName": "Chef 4",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "280",
+                    "AvgUserHours": "04:30:00",
+                    "AvgSessionHours": "04:30:00",
+                    "TotalAdd": "135"
+                }, {
+                    "ShowName": "Chef 1",
+                    "ActiveUser": "4567",
+                    "TotalWatchHours": "205",
+                    "AvgUserHours": "04:55:00",
+                    "AvgSessionHours": "04:55:00",
+                    "TotalAdd": "120"
+                },
+                {
+                    "ShowName": "Chef 2",
+                    "ActiveUser": "7890",
+                    "TotalWatchHours": "320",
+                    "AvgUserHours": "05:20:00",
+                    "AvgSessionHours": "05:20:00",
+                    "TotalAdd": "150"
+                },
+                {
+                    "ShowName": "Chef 3",
+                    "ActiveUser": "1234",
+                    "TotalWatchHours": "150",
+                    "AvgUserHours": "03:45:00",
+                    "AvgSessionHours": "03:45:00",
+                    "TotalAdd": "90"
+                },
+                {
+                    "ShowName": "Chef 4",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "280",
+                    "AvgUserHours": "04:30:00",
+                    "AvgSessionHours": "04:30:00",
+                    "TotalAdd": "135"
+                }
+            ]
+        },
+        {
+            "channelName": "TechTalks",
+            "ActiveUser": "7890",
+            "TotalWatchHours": "320",
+            "AvgUserHours": "05:20:00",
+            "AvgSessionHours": "05:20:00",
+            "TotalAdd": "150",
+            "programdata": [
+                {
+                    "ShowName": "TechTalks 1",
+                    "ActiveUser": "7890",
+                    "TotalWatchHours": "320",
+                    "AvgUserHours": "05:20:00",
+                    "AvgSessionHours": "05:20:00",
+                    "TotalAdd": "150"
+                },
+                {
+                    "ShowName": "TechTalks 2",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "420",
+                    "AvgUserHours": "07:00:00",
+                    "AvgSessionHours": "07:00:00",
+                    "TotalAdd": "200"
+                },
+                {
+                    "ShowName": "TechTalks 3",
+                    "ActiveUser": "2345",
+                    "TotalWatchHours": "280",
+                    "AvgUserHours": "04:40:00",
+                    "AvgSessionHours": "04:40:00",
+                    "TotalAdd": "120"
+                }
+            ]
+        },
+        {
+            "channelName": "Gardening101",
+            "ActiveUser": "1234",
+            "TotalWatchHours": "150",
+            "AvgUserHours": "03:45:00",
+            "AvgSessionHours": "03:45:00",
+            "TotalAdd": "90",
+            "programdata": [
+                {
+                    "ShowName": "Garden 1",
+                    "ActiveUser": "1234",
+                    "TotalWatchHours": "150",
+                    "AvgUserHours": "03:45:00",
+                    "AvgSessionHours": "03:45:00",
+                    "TotalAdd": "90"
+                },
+                {
+                    "ShowName": "Garden 2",
+                    "ActiveUser": "5678",
+                    "TotalWatchHours": "180",
+                    "AvgUserHours": "03:00:00",
+                    "AvgSessionHours": "03:00:00",
+                    "TotalAdd": "105"
+                },
+                {
+                    "ShowName": "Garden 3",
+                    "ActiveUser": "8901",
+                    "TotalWatchHours": "200",
+                    "AvgUserHours": "04:00:00",
+                    "AvgSessionHours": "04:00:00",
+                    "TotalAdd": "75"
+                }
+            ]
+        }
+        
+    ]
+    
+}

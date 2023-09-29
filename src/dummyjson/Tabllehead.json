@@ -1,0 +1,26 @@
+{
+    "success": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "rows": [
+            {
+                "channelName": "Disney TV",
+                "showName": "Oggy & Olly",
+                "numberOfActiveUsers": 1,
+                "totalWatchHours": 0.4,
+                "averageWatchTimePerUser": 0.4,
+                "averageWatchTimePerSession": 99.0,
+                "totalAdImpression": 99.0
+            },
+            {
+                "channelName": "Cartoon Network",
+                "showName": "Mickey Mouse Clubhouse",
+                "numberOfActiveUsers": 1,
+                "totalWatchHours": 0.0833,
+                "averageWatchTimePerUser": 0.0833,
+                "averageWatchTimePerSession": 99.0,
+                "totalAdImpression": 99.0
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+.header-section {
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        max-width: 135px;
+        img {
+            max-width: 100%;
+        }
+    }
+    .right-side {
+        display: flex;
+        align-items: center;
+        .need-help {
+            margin-right: 10px;
+            a {
+                color: #333333;
+                font-weight: 500;
+                font-size: 16px;
+                padding: 12px 24px;
+                line-height: 24px;
+                display: inline-block;
+                &:hover {
+                    color:#D22F26;
+                }
+            }
+        }
+        .contact-us {
+            .btn {
+                background: #D22F26;
+                border-radius: 8px;
+                padding: 12px 24px;
+                color: #ffffff;
+                line-height: 24px;
+                font-size: 16px;
+                font-weight: 500;
+                border: none;
+                transition: all ease-in-out 0.5s;
+                &:hover {
+                    background-color:#0D0D0D;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+ }

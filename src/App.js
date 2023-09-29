@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import Login from './pages/Login';
+import Channelactionscomponent from './pages/channel-actions';
+import ChannelCreationComponent from './pages/channel-creation';
+import ForgetPassword from './pages/forgotpassword';
+import Viewership from './pages/viewership';
+import ResetPassword from './pages/reset-password';
+
+import AppRoutes from './routes/appRouting';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <AppRoutes />
   );
 }
 

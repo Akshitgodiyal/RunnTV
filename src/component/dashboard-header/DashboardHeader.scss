@@ -1,0 +1,37 @@
+
+.dashboard-header {
+    background-color: #ffffff;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 16px rgba(153, 153, 153, 0.08);
+    position: relative;
+    z-index: 1;
+    .logo {
+        max-width: 135px;
+        display: inline-block;
+        vertical-align: middle;
+        img {
+            max-width: 100%;
+        }
+    }
+    .welcome-name {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 80px;
+        h5 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        .date {
+            span {
+                color: #646464;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}
