@@ -149,9 +149,9 @@ export default function Login() {
 
 
 
-// setTimeout(() => {
-//   window.location.href = "/viewership"
-// }, 1500);
+setTimeout(() => {
+  window.location.href = "/viewership"
+}, 1500);
        
       
    

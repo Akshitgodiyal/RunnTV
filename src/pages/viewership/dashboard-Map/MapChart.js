@@ -34,9 +34,9 @@ const MapChart = ({ setTooltipContent, setStateName, setShowDistrict, setzoom })
   }, [state?.MapData?.data, MapStateData]);
 
   const getColorByPercentage = (percentage) => {
-    const startColor = "#ffffff";
-    const endColor = "#005ce6";
-    const lightblue = "#eaf2fd";
+    const startColor = "#FFFFFF";
+    const endColor = "#5F0F13";
+    const lightblue = "#F2BAA1";
     if ((0 < percentage) && (percentage < 0.2)) {
       return lightblue;
     }

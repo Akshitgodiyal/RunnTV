@@ -582,14 +582,21 @@ svg{
       }
   
       &:hover {
-        background-color: #d22f26;
-        color: #fff;
+        border-radius: 6px;
+        border: 0.5px solid #D9D9D9;
+        background: #FFF;
       }
     }
     
 .items-per-page {
     margin-right: auto;
   }
+  label{
+    color: '#333333';
+    font-size: 12px; 
+    font-weight: '400';
+  }
+ 
   }
 
   .selectboxpage{

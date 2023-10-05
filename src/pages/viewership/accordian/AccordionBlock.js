@@ -22,7 +22,7 @@ function AccordionBlock({ title, isOpen, onToggle,filter }) {
   return (
     <div className="accordion-block">
       <a  className={isOpen ? "toggle active" : "toggle"}>
-      <AccordionTableHead data={title} onToggle={onToggle} onTableHeadClick={handleTableHeadClick} />
+      <AccordionTableHead isOpen={isOpen} data={title} onToggle={onToggle} onTableHeadClick={handleTableHeadClick} />
       </a>
       {isOpen && (
         

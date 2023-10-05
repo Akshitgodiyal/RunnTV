@@ -2,16 +2,18 @@ import React, { useState, useEffect } from "react";
 import { ViewershipMap, ViewershipTableChild } from "../../../api/api";
 import { useDispatch } from "react-redux";
 import { ChannelDataAction, MapDataAction } from "../../../Redux/slices";
-import { TimeConverter } from "../../../service/commonFunc";
+import { TimeConverter, formatNumber } from "../../../service/commonFunc";
 import rightarrow  from "../../../assets/images/caret-small-right.svg"
 import leftarrow  from "../../../assets/images/caret-small-left.svg"
+import Loader from "../../../component/Loader/Loader";
 
-function AccordionChild({ data, filter, clickedData }) {
+function AccordionChild({ data, filter, clickedData}) {
   const [programData, setProgramData] = useState([]);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [totalShowLength, setTotalShowLength] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [options, setOptions] = useState([]);
+  const [showLoaders, setshowLoaders] = useState(false);
 
   const dispatch = useDispatch();
  
@@ -30,13 +32,13 @@ function AccordionChild({ data, filter, clickedData }) {
     };
     // console.log("hello", clickedData );
     (async () => {
-      const childdata = await ViewershipTableChild(ViewershipTableChildData);
+      const childdata = await ViewershipTableChild(ViewershipTableChildData,setshowLoaders);
       setProgramData(childdata?.data.data.rows);
       setTotalShowLength(childdata?.data.data.totalResults);
     })();
-
-if(filter?.viewType == "CHANNEL"){
-  console.log("SAS",filter?.viewType);
+ 
+if(filter?.viewType == "CHANNEL" && filter?.duration == "DAY"){
+  // console.log("SAS",filter?.viewType);
   mapRenderData()
 
 }
@@ -49,7 +51,7 @@ if(filter?.viewType == "CHANNEL"){
   
   const mapRenderData = async () => {
  
-    
+   
     const ViewershipMapData = {
       
       channelName: data?.viewKey
@@ -79,8 +81,9 @@ if(filter?.viewType == "CHANNEL"){
     const newOptions = [...Array(maxSelectableValue / itemsPerPage)].map(
       (_, index) => (index + 1) * itemsPerPage
     );
-
-    setOptions(newOptions);
+   
+    
+    setOptions(newOptions.length >= 3 ? newOptions.slice(0, 3) : newOptions);
   }, [totalShowLength]);
 
   const handlePageChange = (pageNumber) => {
@@ -180,20 +183,21 @@ if(filter?.viewType == "CHANNEL"){
     return buttons;
   };
 
-  const showPagination = totalShowLength > itemsPerPage;
+  const showPagination = true
 
   return (
-    <div className="inner">
 
-      <div className="table-content">
+    <div className="inner">
+{ showLoaders && <Loader />}
+ <div className="table-content">
         {programData.map((data, index) => (
           <div key={index} className="table-row">
             <div className="table-col name">{data.showName}</div>
-            <div className="table-col">{data.numberOfActiveUsers}</div>
-            <div className="table-col">{data.totalWatchHours.toFixed(2)}</div>
+            <div className="table-col">{formatNumber(data.numberOfActiveUsers)}</div>
+            <div className="table-col">{formatNumber(data.totalWatchHours.toFixed(2))}</div>
             <div className="table-col">{TimeConverter(data.averageWatchTimePerUser)}</div>
             <div className="table-col">{TimeConverter(data.averageWatchTimePerSession)}</div>
-            <div className="table-col">{data.totalAdImpression}</div>
+            {/* <div className="table-col">{data.totalAdImpression}</div> */}
           </div>
         ))}
       </div>
@@ -201,7 +205,7 @@ if(filter?.viewType == "CHANNEL"){
       {showPagination && (
         <div className="pagination pagination-table"  >
           <div className="items-per-page">
-            <label style={{color: '#333333', fontSize: 12, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Items per page:</label>
+            <label >Items per page:</label>
             <select className="selectboxpage" value={itemsPerPage} onChange={handleItemsPerPageChange}>
               {options.map((option) => (
                 <option key={option} value={option}>
@@ -231,6 +235,7 @@ if(filter?.viewType == "CHANNEL"){
       )}
 
     </div>
+  
   );
 }
 

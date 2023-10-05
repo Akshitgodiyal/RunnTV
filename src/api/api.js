@@ -33,29 +33,30 @@ export const refreshTokenAPI = async () => {
 };
 
 
-export const ViewershipTablehead = async (data) => {
+export const ViewershipTablehead = async (data,setshowLoader) => {
     let URL = ViewershipTablehead_URL
-   
+    setshowLoader(true)
     try {
       const response = await postInstantData(URL, data)
     //   console.log('POST response:', response);
+    setshowLoader(false)
       return response;
     } catch (error) {
-      
+      setshowLoader(false)
     // alert("Something wents wrong, Please try again.");
     }
 
   };
 
-  export const ViewershipTableChild = async (data) => {
+  export const ViewershipTableChild = async (data,setshowLoader) => {
     let URL = ViewershipTableChild_URL
-   
+    setshowLoader(true)
     try {
       const response = await postInstantData(URL, data)
-    //   console.log('POST response:', response);
+      setshowLoader(false)
       return response;
     } catch (error) {
-      
+      setshowLoader(false)
     // alert("Something wents wrong, Please try again.");
     }
 
@@ -89,11 +90,11 @@ export const ViewershipTablehead = async (data) => {
     try {
       const response = await postData(URL, data)
       setTimeout(() => {
-        window.location.href = "/"
+       
       }, 1500);
       // return response;
     } catch (error) {
-      
+      window.location.href = "/"
     // alert("Something wents wrong, Please try again.");
     }
 

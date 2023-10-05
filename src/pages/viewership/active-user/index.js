@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import './activeUser.scss';
-import plusicon from '../../assets/images/plus-icon.png';
-import minusicon from '../../assets/images/minus-icon.png';
-import AreaSelector from '../../pages/viewership/dashboard-Map/AreaSelector';
+import plusicon from '../../../assets/images/plus-icon.png';
+import minusicon from '../../../assets/images/minus-icon.png';
+import AreaSelector from '../../../pages/viewership/dashboard-Map/AreaSelector';
 import { useSelector } from 'react-redux';
-import { formatNumber } from '../../service/commonFunc';
+import { formatNumber } from '../../../service/commonFunc';
 
 function ActiveUser() {
   const [zoom, setZoom] = useState(1);
   const state = useSelector((state) => state);
-  const channelName = state?.ChannelData?.data?.viewKey;
+ 
   const MapDatastate = state?.MapData?.data?.data?.stateWiseActiveUsers;
+  const channelName = state?.ChannelData?.data?.viewKey;
+
 
   const formatData = (data) => {
     const formattedData = [];
@@ -26,7 +28,7 @@ function ActiveUser() {
   const sortedData = formatData(MapDatastate).sort(
     (a, b) => b.population - a.population
   );
-// console.log("channelName",channelName);
+// console.log("channelName",state.ChannelData);
   // Get the top 6 states
   const top6States = sortedData.slice(0, 6);
 
@@ -36,7 +38,7 @@ function ActiveUser() {
         <div className="top">
           <div className="left-side">
             <h4>Active Users</h4>
-            <p>{channelName == "Total" ? "All Channels": channelName}</p>
+            <p>{channelName && channelName == "Total" ? "All Channels": channelName}</p>
           </div>
 
           <div className="zoom-map">

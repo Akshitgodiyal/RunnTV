@@ -3,7 +3,7 @@ import content_icon from "../../../assets/images/content-icon.svg";
 import live_tv from "../../../assets/images/live_tv.svg";
 import room from "../../../assets/images/room.svg";
 
-function AccordionFilter({ handleChange }) {
+function AccordionFilter({ handleChange, Durations}) {
     const [view, setView] = useState('Channel'); // Default value for view_by
     const [duration, setDuration] = useState('day'); // Default value for Duration
 
@@ -12,20 +12,19 @@ function AccordionFilter({ handleChange }) {
       
         if (name === 'view_by') {
             setView(value);
-            handleChange(value, duration); // Pass 'value' directly
+            handleChange(value, duration,{ sort: "asc", key: "viewKey" }); // Pass 'value' directly
         } else if (name === 'Duration') {
             setDuration(value);
-            handleChange(view, value); // Pass 'value' directly
+            handleChange(view, value,{ sort: "asc", key: "viewKey" }); // Pass 'value' directly
         }
     }
    useEffect(()=>{
-    handleChange(view, duration);
+    handleChange(view, duration,{ sort: "asc", key: "viewKey" });
 
    },[])
     
     
-    
-    
+
     
   
     return (
@@ -48,7 +47,7 @@ function AccordionFilter({ handleChange }) {
                 </div>
             </div>
             <div className="duration-block">
-                <h5>Duration </h5>
+                <h5>Duration <small style={{color:"grey", fontSize:"12px"}}>({Durations})</small> </h5>
                 <div className="radio-list">
                     <div className='radio-box'>
                         <input id='day' value="day" name="Duration" type="radio" onChange={(e)=>filterChange(e)} defaultChecked />
