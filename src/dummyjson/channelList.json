@@ -1,0 +1,1575 @@
+[
+    {
+    "id": 2,
+    "channelId": null,
+    "name": "PocketFilms-del",
+    "awsChannelName": "PocketFilms22",
+    "baseSourceLocation": "",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "From the stage, the direct talks that makes you roll on the floor, laughing!",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Comedy",
+    "Stand Ups",
+    "Light Humour"
+    ],
+    "maturityRating": "U/A 16+",
+    "categories": [
+    {
+    "categoryId": 3,
+    "name": "Entertainment",
+    "shortDescription": "Entertainment",
+    "description": "Entertainment!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/entertainment_disable.png",
+    "web": "/web/category/icons/entertainment_disable.png",
+    "mobile": "/mobile/category/icons/entertainment_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/entertainment_enable.png",
+    "web": "/web/category/icons/entertainment_enable.png",
+    "mobile": "/mobile/category/icons/entertainment_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/entertainment.png",
+    "web": "/web/category/entertainment.png",
+    "mobile": "/mobile/category/entertainment.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 3
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 1,
+    "name": "Comedy",
+    "shortDescription": "Comedy",
+    "description": "Comedy",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/comedy.png",
+    "web": "/web/genre/poster/comedy.png",
+    "mobile": "/mobile/genre/poster/comedy.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 1
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 1,
+    "name": "The Lighter Note",
+    "shortDescription": "Happy Dramas",
+    "description": "Light humour dramas with real taste of the real world around us!",
+    "posterImagePath": {
+    "tv": "/tv/theme/theLighterNote.png",
+    "web": "/web/theme/theLighterNote.png",
+    "mobile": "/mobile/theme/theLighterNote.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": false,
+    "orderId": 10
+    }
+    ],
+    "languages": [],
+    "targetAudience": {
+    "targetId": 2,
+    "ageRating": [
+    "U/A 16+",
+    "U/A 13"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000"
+    ],
+    "interestTag": [
+    "StandUps"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 3,
+    "resolution": "mobile",
+    "imagePath": "/images/channel/mobile/pocketFilms.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 4,
+    "resolution": "web",
+    "imagePath": "/images/channel/web/pocketFilms.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://e36288c993cbea78ea3a82b10d004ea7.u25fk1.channel-assembly.mediatailor.ap-south-1.amazonaws.com/v1/channel/PocketFilms2/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": false,
+    "regionalChannel": false,
+    "regionalLanguageId": null,
+    "obsolete": false,
+    "isActive": false,
+    "posterImage": {},
+    "isFeatured": true,
+    "isKidsSafe": null,
+    "displayOrder": null,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 8,
+    "channelId": null,
+    "name": "Pocket Films-del",
+    "awsChannelName": "poc-pocketfilms",
+    "baseSourceLocation": "https://d3dhtn36tqc7zj.cloudfront.net",
+    "sourceBucketName": "runn-pocketfilms-content",
+    "partnerName": "",
+    "description": "The platform for the best short films. Romance, comedy, action, thriller, horror, we have it all. Come, get your daily fix of shorts here.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Comedy",
+    "Stand Ups",
+    "Light Humour"
+    ],
+    "maturityRating": "U/A 16+",
+    "categories": [
+    {
+    "categoryId": 6,
+    "name": "Short Films",
+    "shortDescription": "Short Films",
+    "description": "Short films for back to back entertainment without a monotony!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/shortfilms_disable.png",
+    "web": "/web/category/icons/shortfilms_disable.png",
+    "mobile": "/mobile/category/icons/shortfilms_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/shortfilms_enable.png",
+    "web": "/web/category/icons/shortfilms_enable.png",
+    "mobile": "/mobile/category/icons/shortfilms_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/shortfilms.png",
+    "web": "/web/category/shortfilms.png",
+    "mobile": "/mobile/category/shortfilms.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 6
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 1,
+    "name": "Comedy",
+    "shortDescription": "Comedy",
+    "description": "Comedy",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/comedy.png",
+    "web": "/web/genre/poster/comedy.png",
+    "mobile": "/mobile/genre/poster/comedy.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 1
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 4,
+    "name": "Snacky Movies",
+    "shortDescription": "Short Films",
+    "description": "Short films for back to back entertainment without a monotony!",
+    "posterImagePath": {
+    "tv": "/tv/theme/snackyMovies.png",
+    "web": "/web/theme/snackyMovies.png",
+    "mobile": "/mobile/theme/snackyMovies.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 1
+    }
+    ],
+    "languages": [
+    {
+    "languageId": 9,
+    "name": "Hindi",
+    "code": "hn",
+    "disableIconImagePath": {},
+    "enableIconImagePath": {},
+    "posterImagePath": {
+    "tv": "/tv/language/hindi.png",
+    "web": "/web/language/hindi.png",
+    "mobile": "/mobile/language/hindi.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 2
+    }
+    ],
+    "targetAudience": {
+    "targetId": 9,
+    "ageRating": [
+    "U/A 16+",
+    "U/A 13"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000",
+    "30000"
+    ],
+    "interestTag": [
+    "StandUps",
+    "Comedy",
+    "ShortContent"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 17,
+    "resolution": "mobile",
+    "imagePath": "/channel-logo/pocketFilms-logo.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 18,
+    "resolution": "web",
+    "imagePath": "/channel-logo/pocketFilms-logo.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://e36288c993cbea78ea3a82b10d004ea7.u25fk1.channel-assembly.mediatailor.ap-south-1.amazonaws.com/v1/channel/poc-pocketfilms/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": false,
+    "regionalChannel": false,
+    "regionalLanguageId": 2,
+    "obsolete": false,
+    "isActive": false,
+    "posterImage": {},
+    "isFeatured": true,
+    "isKidsSafe": null,
+    "displayOrder": null,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 9,
+    "channelId": null,
+    "name": "NuNu TV",
+    "awsChannelName": "PRD_NUNUTV",
+    "baseSourceLocation": "https://d22z5p072jza14.cloudfront.net",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "Spark learning through music with educational songs & rhymes for kids, toddlers, and families! Join us for catchy tunes, colourful animations, and interactive videos that cover numbers, letters, shapes, colours, and more.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Kids"
+    ],
+    "maturityRating": "U-All Ages",
+    "categories": [
+    {
+    "categoryId": 7,
+    "name": "Kids",
+    "shortDescription": "Kids",
+    "description": "Kids!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/kids_disable.png",
+    "web": "/web/category/icons/kids_disable.png",
+    "mobile": "/mobile/category/icons/kids_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/kids_enable.png",
+    "web": "/web/category/icons/kids_enable.png",
+    "mobile": "/mobile/category/icons/kids_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/kids.png",
+    "web": "/web/category/kids.png",
+    "mobile": "/mobile/category/kids.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 7
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 3,
+    "name": "Kids",
+    "shortDescription": "Kids",
+    "description": "Kids",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/kids.png",
+    "web": "/web/genre/poster/kids.png",
+    "mobile": "/mobile/genre/poster/kids.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 3
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 3,
+    "name": "The Little Ones",
+    "shortDescription": "Kids",
+    "description": "Lovely rhymes and fun animations for making the little ones even more happier!",
+    "posterImagePath": {
+    "tv": "/tv/theme/theLittleOnes.png",
+    "web": "/web/theme/theLittleOnes.png",
+    "mobile": "/mobile/theme/theLittleOnes.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 6
+    }
+    ],
+    "languages": [
+    {
+    "languageId": 8,
+    "name": "English",
+    "code": "en",
+    "disableIconImagePath": {},
+    "enableIconImagePath": {},
+    "posterImagePath": {
+    "tv": "/tv/language/english.png",
+    "web": "/web/language/english.png",
+    "mobile": "/mobile/language/english.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 1
+    }
+    ],
+    "targetAudience": {
+    "targetId": 10,
+    "ageRating": [
+    "U-All Ages"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000",
+    "30000"
+    ],
+    "interestTag": [
+    "StandUps",
+    "Comedy",
+    "ShortContent"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 19,
+    "resolution": "mobile",
+    "imagePath": "/NUNUTV/poster/logo_mobile.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 20,
+    "resolution": "web",
+    "imagePath": "/NUNUTV/poster/logo_web.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://e876862b86a142e4ae1afcd4f0250d7b.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/NUNUTV/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": false,
+    "regionalChannel": false,
+    "regionalLanguageId": 8,
+    "obsolete": false,
+    "isActive": true,
+    "posterImage": {},
+    "isFeatured": true,
+    "isKidsSafe": true,
+    "displayOrder": 4,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 10,
+    "channelId": null,
+    "name": "Runn Kids",
+    "awsChannelName": "PRD_RUNKID",
+    "baseSourceLocation": "https://d22z5p072jza14.cloudfront.net",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "Stay curious and stay tuned for endless excitement with a channel that's a vibrant playground where entertainment and learning come together to create an enchanting world, just for kids.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Kids"
+    ],
+    "maturityRating": "U-All Ages",
+    "categories": [
+    {
+    "categoryId": 7,
+    "name": "Kids",
+    "shortDescription": "Kids",
+    "description": "Kids!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/kids_disable.png",
+    "web": "/web/category/icons/kids_disable.png",
+    "mobile": "/mobile/category/icons/kids_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/kids_enable.png",
+    "web": "/web/category/icons/kids_enable.png",
+    "mobile": "/mobile/category/icons/kids_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/kids.png",
+    "web": "/web/category/kids.png",
+    "mobile": "/mobile/category/kids.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 7
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 3,
+    "name": "Kids",
+    "shortDescription": "Kids",
+    "description": "Kids",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/kids.png",
+    "web": "/web/genre/poster/kids.png",
+    "mobile": "/mobile/genre/poster/kids.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 3
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 3,
+    "name": "The Little Ones",
+    "shortDescription": "Kids",
+    "description": "Lovely rhymes and fun animations for making the little ones even more happier!",
+    "posterImagePath": {
+    "tv": "/tv/theme/theLittleOnes.png",
+    "web": "/web/theme/theLittleOnes.png",
+    "mobile": "/mobile/theme/theLittleOnes.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 6
+    }
+    ],
+    "languages": [],
+    "targetAudience": {
+    "targetId": 11,
+    "ageRating": [
+    "U-All Ages"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000",
+    "30000"
+    ],
+    "interestTag": [
+    "StandUps",
+    "Comedy",
+    "ShortContent"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 21,
+    "resolution": "mobile",
+    "imagePath": "/RUNKID/poster/logo_mobile.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 22,
+    "resolution": "web",
+    "imagePath": "/RUNKID/poster/logo_web.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://73aff5f656764cacb00bbb0a7809c0e4.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/RUNKID/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": false,
+    "regionalChannel": false,
+    "regionalLanguageId": 8,
+    "obsolete": false,
+    "isActive": true,
+    "posterImage": {},
+    "isFeatured": true,
+    "isKidsSafe": true,
+    "displayOrder": 7,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 11,
+    "channelId": null,
+    "name": "Runn Action",
+    "awsChannelName": "PRD_RUNACT",
+    "baseSourceLocation": "https://d22z5p072jza14.cloudfront.net",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "Get your adrenaline pumping with Runn Action! Catch the best of explosive stunts, intense showdowns, and heart-racing adventures with the selected catalouge of action films.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Runn Action"
+    ],
+    "maturityRating": "U-All Ages",
+    "categories": [
+    {
+    "categoryId": 5,
+    "name": "Movies",
+    "shortDescription": "Movies",
+    "description": "Movies!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/movies_disable.png",
+    "web": "/web/category/icons/movies_disable.png",
+    "mobile": "/mobile/category/icons/movies_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/movies_enable.png",
+    "web": "/web/category/icons/movies_enable.png",
+    "mobile": "/mobile/category/icons/movies_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/movies.png",
+    "web": "/web/category/movies.png",
+    "mobile": "/mobile/category/movies.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 5
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 4,
+    "name": "Action & Adventure",
+    "shortDescription": "Action & Adventure",
+    "description": "Action & Adventure",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/actionadventure.png",
+    "web": "/web/genre/poster/actionadventure.png",
+    "mobile": "/mobile/genre/poster/actionadventure.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 4
+    },
+    {
+    "genreId": 5,
+    "name": "Thrillers",
+    "shortDescription": "Thrillers",
+    "description": "Thrillers",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/thriller.png",
+    "web": "/web/genre/poster/thriller.png",
+    "mobile": "/mobile/genre/poster/thriller.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 5
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 55,
+    "name": "International",
+    "shortDescription": "International",
+    "description": "Thoughtfully chosen content from around the world that will get you hooked to your screen! ",
+    "posterImagePath": {
+    "tv": "/tv/theme/international.png",
+    "web": "/web/theme/international.png",
+    "mobile": "/mobile/theme/international.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 4
+    },
+    {
+    "themeId": 56,
+    "name": "Thrills and Chills",
+    "shortDescription": "Thrills and Chills",
+    "description": "Get your heart racing with gripping suspense, unexpected twists, and adrenaline-pumping action!",
+    "posterImagePath": {
+    "tv": "/tv/theme/thrillsChills.png",
+    "web": "/web/theme/thrillsChills.png",
+    "mobile": "/mobile/theme/thrillsChills.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 2
+    }
+    ],
+    "languages": [],
+    "targetAudience": {
+    "targetId": 12,
+    "ageRating": [
+    "U-All Ages"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000",
+    "30000"
+    ],
+    "interestTag": [
+    "StandUps",
+    "Comedy",
+    "ShortContent"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 23,
+    "resolution": "mobile",
+    "imagePath": "/RUNACT/poster/logo_mobile.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 24,
+    "resolution": "web",
+    "imagePath": "/RUNACT/poster/logo_web.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://d75f61259af04d9ea002d5429c934854.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/RUNACT/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": true,
+    "regionalChannel": false,
+    "regionalLanguageId": null,
+    "obsolete": false,
+    "isActive": true,
+    "posterImage": {},
+    "isFeatured": null,
+    "isKidsSafe": null,
+    "displayOrder": 5,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 12,
+    "channelId": null,
+    "name": "Superfine Films",
+    "awsChannelName": "PRD_SUPFLM",
+    "baseSourceLocation": "https://d22z5p072jza14.cloudfront.net",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "Superfine Films is your ultimate destination for gripping international films. With a curated selection that spans across genres, Superfine brings the world's finest stories to you.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Runn Action"
+    ],
+    "maturityRating": "U-All Ages",
+    "categories": [
+    {
+    "categoryId": 5,
+    "name": "Movies",
+    "shortDescription": "Movies",
+    "description": "Movies!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/movies_disable.png",
+    "web": "/web/category/icons/movies_disable.png",
+    "mobile": "/mobile/category/icons/movies_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/movies_enable.png",
+    "web": "/web/category/icons/movies_enable.png",
+    "mobile": "/mobile/category/icons/movies_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/movies.png",
+    "web": "/web/category/movies.png",
+    "mobile": "/mobile/category/movies.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 5
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 4,
+    "name": "Action & Adventure",
+    "shortDescription": "Action & Adventure",
+    "description": "Action & Adventure",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/actionadventure.png",
+    "web": "/web/genre/poster/actionadventure.png",
+    "mobile": "/mobile/genre/poster/actionadventure.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 4
+    },
+    {
+    "genreId": 5,
+    "name": "Thrillers",
+    "shortDescription": "Thrillers",
+    "description": "Thrillers",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/thriller.png",
+    "web": "/web/genre/poster/thriller.png",
+    "mobile": "/mobile/genre/poster/thriller.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 5
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 55,
+    "name": "International",
+    "shortDescription": "International",
+    "description": "Thoughtfully chosen content from around the world that will get you hooked to your screen! ",
+    "posterImagePath": {
+    "tv": "/tv/theme/international.png",
+    "web": "/web/theme/international.png",
+    "mobile": "/mobile/theme/international.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 4
+    }
+    ],
+    "languages": [],
+    "targetAudience": {
+    "targetId": 13,
+    "ageRating": [
+    "U-All Ages"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000",
+    "30000"
+    ],
+    "interestTag": [
+    "StandUps",
+    "Comedy",
+    "ShortContent"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 25,
+    "resolution": "mobile",
+    "imagePath": "/SUPFLM/poster/logo_mobile.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 26,
+    "resolution": "web",
+    "imagePath": "/SUPFLM/poster/logo_web.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://a286ef63b50148e3a479fb3672bd8b6c.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/SUPFLM/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": true,
+    "regionalChannel": false,
+    "regionalLanguageId": null,
+    "obsolete": false,
+    "isActive": true,
+    "posterImage": {},
+    "isFeatured": null,
+    "isKidsSafe": null,
+    "displayOrder": 2,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 14,
+    "channelId": null,
+    "name": "Runn Short Films",
+    "awsChannelName": "PRD_RUNSHF",
+    "baseSourceLocation": "https://d22z5p072jza14.cloudfront.net",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "Immerse yourself in a world of captivating narratives, where every moment counts. From poignant dramas to thrilling tales, experience the power of storytelling distilled into short films, where big stories come in small packages.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Runn Action"
+    ],
+    "maturityRating": "U-All Ages",
+    "categories": [
+    {
+    "categoryId": 6,
+    "name": "Short Films",
+    "shortDescription": "Short Films",
+    "description": "Short films for back to back entertainment without a monotony!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/shortfilms_disable.png",
+    "web": "/web/category/icons/shortfilms_disable.png",
+    "mobile": "/mobile/category/icons/shortfilms_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/shortfilms_enable.png",
+    "web": "/web/category/icons/shortfilms_enable.png",
+    "mobile": "/mobile/category/icons/shortfilms_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/shortfilms.png",
+    "web": "/web/category/shortfilms.png",
+    "mobile": "/mobile/category/shortfilms.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 6
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 2,
+    "name": "Drama",
+    "shortDescription": "Drama",
+    "description": "Drama",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/drama.png",
+    "web": "/web/genre/poster/drama.png",
+    "mobile": "/mobile/genre/poster/drama.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 2
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 4,
+    "name": "Snacky Movies",
+    "shortDescription": "Short Films",
+    "description": "Short films for back to back entertainment without a monotony!",
+    "posterImagePath": {
+    "tv": "/tv/theme/snackyMovies.png",
+    "web": "/web/theme/snackyMovies.png",
+    "mobile": "/mobile/theme/snackyMovies.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 1
+    },
+    {
+    "themeId": 56,
+    "name": "Thrills and Chills",
+    "shortDescription": "Thrills and Chills",
+    "description": "Get your heart racing with gripping suspense, unexpected twists, and adrenaline-pumping action!",
+    "posterImagePath": {
+    "tv": "/tv/theme/thrillsChills.png",
+    "web": "/web/theme/thrillsChills.png",
+    "mobile": "/mobile/theme/thrillsChills.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 2
+    }
+    ],
+    "languages": [],
+    "targetAudience": {
+    "targetId": 15,
+    "ageRating": [
+    "U-All Ages"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000",
+    "30000"
+    ],
+    "interestTag": [
+    "StandUps",
+    "Comedy",
+    "ShortContent"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 29,
+    "resolution": "mobile",
+    "imagePath": "/RUNSHF/poster/logo_mobile.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 30,
+    "resolution": "web",
+    "imagePath": "/RUNSHF/poster/logo_web.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://b34a069d99294a65851647139dbc299a.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/RUNSHF/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": false,
+    "regionalChannel": false,
+    "regionalLanguageId": null,
+    "obsolete": false,
+    "isActive": true,
+    "posterImage": {},
+    "isFeatured": null,
+    "isKidsSafe": null,
+    "displayOrder": 6,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 15,
+    "channelId": null,
+    "name": "Pocket Films",
+    "awsChannelName": "PRD_PKTFLM",
+    "baseSourceLocation": "https://d22z5p072jza14.cloudfront.net",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "The platform for the best short films. Romance, comedy, action, thriller, horror, we have it all. Come, get your daily fix of shorts here.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LOOP",
+    "descriptors": [
+    "Short films"
+    ],
+    "maturityRating": "U-All Ages",
+    "categories": [
+    {
+    "categoryId": 6,
+    "name": "Short Films",
+    "shortDescription": "Short Films",
+    "description": "Short films for back to back entertainment without a monotony!",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/shortfilms_disable.png",
+    "web": "/web/category/icons/shortfilms_disable.png",
+    "mobile": "/mobile/category/icons/shortfilms_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/shortfilms_enable.png",
+    "web": "/web/category/icons/shortfilms_enable.png",
+    "mobile": "/mobile/category/icons/shortfilms_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/shortfilms.png",
+    "web": "/web/category/shortfilms.png",
+    "mobile": "/mobile/category/shortfilms.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 6
+    }
+    ],
+    "genres": [
+    {
+    "genreId": 2,
+    "name": "Drama",
+    "shortDescription": "Drama",
+    "description": "Drama",
+    "posterImagePath": {
+    "tv": "/tv/genre/poster/drama.png",
+    "web": "/web/genre/poster/drama.png",
+    "mobile": "/mobile/genre/poster/drama.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_disable.png",
+    "web": "/web/genre/icons/shows_disable.png",
+    "mobile": "/mobile/genre/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/genre/icons/shows_enable.png",
+    "web": "/web/genre/icons/shows_enable.png",
+    "mobile": "/mobile/genre/icons/shows_enable.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 2
+    }
+    ],
+    "themes": [
+    {
+    "themeId": 4,
+    "name": "Snacky Movies",
+    "shortDescription": "Short Films",
+    "description": "Short films for back to back entertainment without a monotony!",
+    "posterImagePath": {
+    "tv": "/tv/theme/snackyMovies.png",
+    "web": "/web/theme/snackyMovies.png",
+    "mobile": "/mobile/theme/snackyMovies.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 1
+    },
+    {
+    "themeId": 56,
+    "name": "Thrills and Chills",
+    "shortDescription": "Thrills and Chills",
+    "description": "Get your heart racing with gripping suspense, unexpected twists, and adrenaline-pumping action!",
+    "posterImagePath": {
+    "tv": "/tv/theme/thrillsChills.png",
+    "web": "/web/theme/thrillsChills.png",
+    "mobile": "/mobile/theme/thrillsChills.png"
+    },
+    "disableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_disable.png",
+    "web": "/web/theme/icons/shows_disable.png",
+    "mobile": "/mobile/theme/icons/shows_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/theme/icons/shows_enable.png",
+    "web": "/web/theme/icons/shows_enable.png",
+    "mobile": "/mobile/theme/icons/shows_enable.png"
+    },
+    "obsolete": false,
+    "active": true,
+    "orderId": 2
+    }
+    ],
+    "languages": [
+    {
+    "languageId": 9,
+    "name": "Hindi",
+    "code": "hn",
+    "disableIconImagePath": {},
+    "enableIconImagePath": {},
+    "posterImagePath": {
+    "tv": "/tv/language/hindi.png",
+    "web": "/web/language/hindi.png",
+    "mobile": "/mobile/language/hindi.png"
+    },
+    "displayOnHome": false,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 2
+    }
+    ],
+    "targetAudience": {
+    "targetId": 16,
+    "ageRating": [
+    "U-All Ages"
+    ],
+    "gender": [
+    "MALE",
+    "FEMALE"
+    ],
+    "location": [
+    "DELHI",
+    "MUMBAI"
+    ],
+    "incomeSegment": [
+    "20000",
+    "30000"
+    ],
+    "interestTag": [
+    "StandUps",
+    "Comedy",
+    "ShortContent"
+    ]
+    },
+    "logos": [
+    {
+    "logoId": 31,
+    "resolution": "mobile",
+    "imagePath": "/PKTFLM/poster/logo_mobile.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 32,
+    "resolution": "web",
+    "imagePath": "/PKTFLM/poster/logo_web.png",
+    "entityName": "",
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://d2eacba7e43f4a828120a39a4fcc8d98.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/PKTFLM/index.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": false,
+    "regionalChannel": false,
+    "regionalLanguageId": null,
+    "obsolete": false,
+    "isActive": true,
+    "posterImage": {},
+    "isFeatured": null,
+    "isKidsSafe": null,
+    "displayOrder": 1,
+    "isAwsChannel": true,
+    "isWatchListEnabled": true,
+    "isStartOverEnabled": true
+    },
+    {
+    "id": 16,
+    "channelId": null,
+    "name": "NAVBHARAT",
+    "awsChannelName": "PRD_NAVBHT",
+    "baseSourceLocation": "https://d22z5p072jza14.cloudfront.net",
+    "sourceBucketName": null,
+    "partnerName": "",
+    "description": "अब बदलेगा भारत, बनेगा नवभारत. Times Now Navbharat is India's national 24*7 hindi news channel from The Times Network.",
+    "channelType": "",
+    "startDate": "",
+    "playbackMode": "LINEAR",
+    "descriptors": [],
+    "maturityRating": "U-All Ages",
+    "categories": [
+    {
+    "categoryId": 9,
+    "name": "News & Opinion",
+    "shortDescription": "News & Opinion",
+    "description": "News & Opinion",
+    "disableIconImagePath": {
+    "tv": "/tv/category/icons/performance_disable.png",
+    "web": "/web/category/icons/performance_disable.png",
+    "mobile": "/mobile/category/icons/performance_disable.png"
+    },
+    "enableIconImagePath": {
+    "tv": "/tv/category/icons/performance_enable.png",
+    "web": "/web/category/icons/performance_enable.png",
+    "mobile": "/mobile/category/icons/performance_enable.png"
+    },
+    "posterImagePath": {
+    "tv": "/tv/category/performance.png",
+    "web": "/web/category/performance.png",
+    "mobile": "/mobile/category/performance.png"
+    },
+    "displayOnHome": true,
+    "displayOnDiscover": true,
+    "obsolete": false,
+    "active": true,
+    "orderId": 9
+    }
+    ],
+    "genres": [],
+    "themes": [],
+    "languages": [],
+    "targetAudience": null,
+    "logos": [
+    {
+    "logoId": 33,
+    "resolution": "mobile",
+    "imagePath": "/TIMNOW/poster/logo_mobile.png",
+    "entityName": null,
+    "obsolete": false,
+    "active": true
+    },
+    {
+    "logoId": 34,
+    "resolution": "web",
+    "imagePath": "/TIMNOW/poster/logo_web.png",
+    "entityName": null,
+    "obsolete": false,
+    "active": true
+    }
+    ],
+    "fillerSourceLocation": "",
+    "playbackUrl": "https://c46b8bcff8794e7da8558edce3f8c666.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/NAVBHT/master.m3u8",
+    "setupDate": null,
+    "industry": "",
+    "clientName": "",
+    "clientId": null,
+    "sponsorshipType": "",
+    "dealStartDate": null,
+    "dealEndDate": null,
+    "start": true,
+    "multipleLanguage": false,
+    "regionalChannel": false,
+    "regionalLanguageId": null,
+    "obsolete": false,
+    "isActive": true,
+    "posterImage": {},
+    "isFeatured": null,
+    "isKidsSafe": null,
+    "displayOrder": 3,
+    "isAwsChannel": false,
+    "isWatchListEnabled": false,
+    "isStartOverEnabled": false
+    }
+    ]
+    

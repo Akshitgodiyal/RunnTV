@@ -84,6 +84,7 @@ const MapChart = ({ setTooltipContent, setStateName, setShowDistrict, setzoom })
               geographies.map(geo => {
                 const stateInfo = stateData.find(stateObj => stateObj.name === geo.properties.ST_NM);
                 const percentage = stateInfo ? stateInfo.percentage : 0;
+                const maxPercentage = Math.max(...stateData.map(state => state.percentage));
                 const fill = getColorByPercentage(percentage);
 const perce = stateInfo ? stateInfo?.activeUser : 0
                 // Calculate the middle point of each state
@@ -105,14 +106,14 @@ const perce = stateInfo ? stateInfo?.activeUser : 0
                           outline: "none"
                         },
                         hover: {
-                          fill: "#eaf2fd",
-                          stroke: "#005ce6",
+                          fill ,
+                          stroke: "#5F0F13",
                           strokeWidth: 0.6,
                           outline: "none"
                         },
                         pressed: {
-                          fill: "#2E8B57",
-                          stroke: "#2E8B57",
+                          fill, 
+                          stroke: "#5F0F13",
                           strokeWidth: 0.1,
                           outline: "none"
                         },
@@ -131,7 +132,7 @@ const perce = stateInfo ? stateInfo?.activeUser : 0
     style={{
       fontFamily: "Arial, sans-serif",
       fontSize: 3,
-      fill: "#000"
+      fill: percentage === maxPercentage ? "#fff" : "#000" // Set text color to white for the highest percentage state
     }}
   >
     

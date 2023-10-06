@@ -2,14 +2,16 @@ import React from 'react'
 
 import "./ChannelActions.scss"
 import Dashboardheader from '../../component/dashboard-header'
+import SlideBar from '../../component/sidebar/sidebar'
+
+
+
 export default function Channelactionscomponent() {
-
-
   return (
     <>
     <Dashboardheader />
     <div className="main-content">
-        <app-sidebar></app-sidebar>
+      <SlideBar />
         <div className="content-body">
             <div className="dashboard-content">
                 <div className="top-content">

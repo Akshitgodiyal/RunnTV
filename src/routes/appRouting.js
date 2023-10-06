@@ -6,6 +6,9 @@ import Login from '../pages/Login';
 import ResetPassword from '../pages/reset-password';
 import Channelactionscomponent from '../pages/channel-actions';
 import Viewership from '../pages/viewership';
+import Scheduling from '../pages/Scheduling';
+import Cmsdashboard from '../pages/cms-dashboad';
+import CmsLayout from '../Layout/CmsLayout';
 // import ViewershipComponent from './ViewershipComponent';
 // import DashboardComponent from './DashboardComponent';
 // import DashbordChannelComponent from './DashbordChannelComponent';
@@ -27,6 +30,15 @@ function AppRoutes() {
 <Route path="/channel-creation" element={<channelCreationComponent />} /> 
 <Route path="/channel-action" element={<Channelactionscomponent />} /> 
 <Route path="/viewership" element={<Viewership />} /> 
+
+
+
+  <Route element={<CmsLayout />}>
+
+    <Route path="Scheduling" element={<Scheduling />} />
+    {/* Add other nested routes for the "CmsLayout" here */}
+  </Route>
+
 
 
       {/* <Route exact path="/" component={LoginComponent} />
