@@ -6,6 +6,7 @@ import currentDatas from "../../dummyjson/channelList.json"
 import "./scheduling.scss"
 import rightarrow  from "../../assets/images/rightvector.png"
 import leftarrow  from "../../assets/images/Vector.png"
+import CalendarComponent from './Schedule'
 function Scheduling() {
     const pageSize = 5; // Number of items per page
     const [currentPage, setCurrentPage] = useState(1);
@@ -34,7 +35,7 @@ function Scheduling() {
   return (
 
       <div className="content-body">
-        <div className="dashboard-content">
+        {/* <div className="dashboard-content">
           <div className="top-content">
             <div className="left-side">
               <h3>Scheduling</h3>
@@ -83,9 +84,9 @@ function Scheduling() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       
-
+<CalendarComponent />
   </div>
   )
 }
