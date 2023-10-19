@@ -2,15 +2,26 @@ import instance from "../service/axiosConfig";
 import axios from "axios";
 //API method
 
-// Function for making a GET request
-// export const fetchData = async () => {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/data`);
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+//get method
+export const getData = async (URL,headers) => {
+
+
+  try {
+    const response = await  axios.get(`${URL}`, headers);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getInstantData = async (URL,headers) => {
+  try {
+    const response = await instance.get(`${URL}`, headers);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 // Function for making a POST request
 export const postData = async (URL,data,headers) => {
@@ -31,4 +42,13 @@ export const postData = async (URL,data,headers) => {
       }
     };
   
-  
+    export const deleteInstantData = async (URL,headers) => {
+      try {
+        const response = await instance.delete(`${URL}`, headers);
+        console.log("dsfghjk");
+        return response;
+      } catch (error) {
+    return error.response.data
+        // throw error;
+      }
+    };

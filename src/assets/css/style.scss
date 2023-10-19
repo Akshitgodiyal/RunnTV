@@ -399,12 +399,14 @@ a {
         justify-content: flex-end;
         width: 100%;
         .count {
+            background: #F2F2F2;
             width: 120px;
             font-weight: 500; 
             font-size: 14px; 
             color: #333333;
         }
         .pagination-arrow {
+            background: #F2F2F2;
             width: 60px;
             display: flex;
             justify-content: space-between;

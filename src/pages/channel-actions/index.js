@@ -27,15 +27,15 @@ export default function Channelactionscomponent() {
                     <div className="right-side">
                         <div className="icon-list">
                             <div className="search-icon">
-                                <a href="javascript:void(0)" className="icon">
+                                <a className="icon">
                                     <img src="./assets/images/ic_round-search.svg" alt="" />
                                 </a>
                             </div> 
                             <div className="view-list">
-                                <a href="javascript:void(0)" className="grid-icon icon active">
+                                <a className="grid-icon icon active">
                                     <img src="./assets/images/view_module.svg" alt="" />
                                 </a>
-                                <a href="javascript:void(0)" className="list-icon icon">
+                                <a className="list-icon icon">
                                     <img src="./assets/images/view_list.svg" alt="" />
                                 </a>
                             </div>
@@ -49,7 +49,8 @@ export default function Channelactionscomponent() {
                         <li><a href="#">Publish</a></li> 
                     </ul>
                 </div> 
-                <div className="table table-checkbox">
+           <div className="table-checkbox">
+           <div className="table ">
                     <table>
                         <thead>
                             <tr>
@@ -180,7 +181,8 @@ export default function Channelactionscomponent() {
                             </tr>  
                         </tbody>
                     </table>
-                </div>
+               
+            </div>
                 <div className="table-pagination">
                     <div className="pagination-count">
                         <div className="count">
@@ -192,7 +194,10 @@ export default function Channelactionscomponent() {
                         </div>
                     </div>
                 </div>
-            </div>
+           </div >
+       
+            </div>  
+           
         </div> 
     </div>
     </>

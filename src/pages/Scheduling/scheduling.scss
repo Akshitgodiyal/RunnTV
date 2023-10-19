@@ -48,11 +48,14 @@
         }
     }
 }
+.Scheduling{
+    .table, .table-pagination {
+        width:100%;
+        max-width: 800px;
+    }
 
-.table, .table-pagination {
-    width:100%;
-    max-width: 800px;
 }
+
 
 .table-striped {
     tbody {
@@ -77,8 +80,7 @@
 /* Place your custom CSS styles here */
 
 body {
-    margin-top: 40px;
-    text-align: center;
+
     font-size: 14px;
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
   }
@@ -128,7 +130,7 @@ body {
     margin-bottom: 20px;
   }
   .custom-event {
-    // background-color: #3a87ad;
+    // background-color: #1e5b83;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
@@ -146,6 +148,10 @@ body {
 }
   }
   
-  .fc-event-main:hover {
+  .fc-event-main {
     background-color: #1e5b83;
+  }
+  .custom-event-element .fc-event-main {
+    /* Add custom sizing styles here */
+    height: auto; /* You can set a specific height or 'auto' to adjust automatically */
   }

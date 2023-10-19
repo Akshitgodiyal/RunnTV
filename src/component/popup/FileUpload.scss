@@ -1,0 +1,72 @@
+/* CSS for the popup overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* CSS for the popup container */
+  .popup-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 80%;
+    text-align: center;
+  }
+  
+  /* Rest of the styles remain the same */
+  .dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.3s ease;
+  }
+  
+  .dropzone:hover {
+    border: 2px dashed #337ab7;
+  }
+  
+  /* CSS for the text inside the dropzone */
+  .dropzone p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Optional: CSS for the uploaded files list */
+  .uploaded-files {
+    margin-top: 20px;
+  }
+  
+  .uploaded-files h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .uploaded-files ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .uploaded-files li {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Optional: Style for the file input (hidden) */
+  .file-input {
+    display: none;
+  }
+  

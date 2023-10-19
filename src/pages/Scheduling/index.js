@@ -34,7 +34,7 @@ function Scheduling() {
   
   return (
 
-      <div className="content-body">
+      <div className="content-body Scheduling">
         {/* <div className="dashboard-content">
           <div className="top-content">
             <div className="left-side">

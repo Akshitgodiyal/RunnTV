@@ -1,4 +1,4 @@
-export const baseURL = "https://0ccc-2409-4053-2e8e-97af-c977-6bfa-e2c-ec97.ngrok-free.app/runtv/v1"
+export const baseURL = "https://a3ee-49-249-156-2.ngrok-free.app/runtv/v1"
 export const Login_URL = `${baseURL}/auth/login`;
 export const ForgetPassword_URL = `${baseURL}/password/resetlink`
 export const ResetPassword_URL = `${baseURL}/auth/password/reset`
@@ -7,3 +7,9 @@ export const ViewershipTablehead_URL = `${baseURL}/dashboard/views`
 export const ViewershipTableChild_URL = `${baseURL}/dashboard/shows`
 export const ViewershipMap_URL = `${baseURL}/dashboard/map`
 export const Logout_URL = `${baseURL}/user/logout`
+export const CMS_Uplaod = `${baseURL}/assets/upload`
+export const Partnerlist_URL = `${baseURL}/partners`
+export const Partnersearch_URL = `${baseURL}/partners/search`
+export const Partnerdelete_URL = `${baseURL}/partners`
+export const Partnerupdate_URL = `${baseURL}/partners`
+export const Partnercreate_URL = `${baseURL}/partners`

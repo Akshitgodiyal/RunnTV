@@ -9,13 +9,13 @@ export default function channelCreationComponent() {
   return (
     <>
 <DashboardHeader />
-<div class="sidebar-menu">
-      <div class="back-menu">
-          <a href="javascript:void(0)"><img src="./assets/images/back-icon.svg"/></a>
+<div className="sidebar-menu">
+      <div className="back-menu">
+          <a ><img src="./assets/images/back-icon.svg"/></a>
       </div>
-      <div class="menu">
+      <div className="menu">
           <ul>
-              <li class="active">
+              <li className="active">
                   <a ><img src={asseticon} /><span>Asset Management</span></a>
               </li>
               <li>

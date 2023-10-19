@@ -1,7 +1,7 @@
 import axios from "axios";
 
-import { Logout_URL, RefreshToken_URL, ViewershipMap_URL, ViewershipTableChild_URL, ViewershipTablehead_URL } from "../service/API_URL";
-import { postData, postInstantData } from "./apiMethod";
+import { Logout_URL, Partnercreate_URL, Partnerdelete_URL, Partnerlist_URL, Partnersearch_URL, Partnerupdate_URL, RefreshToken_URL, ViewershipMap_URL, ViewershipTableChild_URL, ViewershipTablehead_URL } from "../service/API_URL";
+import { deleteInstantData, getInstantData, postData, postInstantData } from "./apiMethod";
 import { UUID_CODE, deviceType } from "../utility/deviceid";
 const refreshToken = localStorage.getItem("refreshToken")
 
@@ -95,6 +95,108 @@ export const ViewershipTablehead = async (data,setshowLoader) => {
       // return response;
     } catch (error) {
       window.location.href = "/"
+    // alert("Something wents wrong, Please try again.");
+    }
+
+  };
+
+  //asset Management
+  export const Partner_list = async () => {
+    let URL = Partnerlist_URL
+    const data = {
+      
+      deviceInfo: {
+        deviceId: UUID_CODE(),
+        deviceType: deviceType,
+      },
+    };
+
+    try {
+      const response = await getInstantData(URL, data)
+  
+      return response;
+    } catch (error) {
+      // window.location.href = "/"
+    // alert("Something wents wrong, Please try again.");
+    }
+
+  };
+  export const Partner_search = async (search) => {
+    let URL = Partnersearch_URL
+    const data = {
+      
+      deviceInfo: {
+        deviceId: UUID_CODE(),
+        deviceType: deviceType,
+      },
+    };
+    const params = {
+  name:search
+    };
+
+    try {
+      const response = await getInstantData(URL ,{params})
+  
+      return response;
+    } catch (error) {
+      // window.location.href = "/"
+    // alert("Something wents wrong, Please try again.");
+    }
+
+  };
+
+  export const Partner_delete = async (param) => {
+    let URL = Partnerdelete_URL+"/"+param
+    
+    try {
+      const response = await deleteInstantData(URL)
+ return response
+   
+    } catch (error) {
+      return error
+    // alert("Something wents wrong, Please try again.");
+    }
+
+  };
+
+  export const Partner_update = async (data,param) => {
+    let URL = Partnerupdate_URL+"/"+param
+
+  
+    try {
+      const response = await postInstantData(URL, data)
+    //   console.log('POST response:', response);
+      return response;
+    } catch (error) {
+      
+    // alert("Something wents wrong, Please try again.");
+    }
+
+  };
+
+  export const Partner_create = async (data) => {
+    let URL = Partnercreate_URL
+  
+    try {
+      const response = await postInstantData(URL, data)
+      console.log('POST response:', response);
+      return response;
+    } catch (error) {
+      
+    alert("Something wents wrong, Please try again.");
+    }
+
+  };
+
+  export const Partner_archive = async (param) => {
+    let URL = Partnerdelete_URL+"/"+param+"/archive"
+    
+    try {
+      const response = await postInstantData(URL)
+ return response
+   
+    } catch (error) {
+      return error
     // alert("Something wents wrong, Please try again.");
     }
 

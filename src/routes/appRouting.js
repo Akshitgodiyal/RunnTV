@@ -9,6 +9,8 @@ import Viewership from '../pages/viewership';
 import Scheduling from '../pages/Scheduling';
 import Cmsdashboard from '../pages/cms-dashboad';
 import CmsLayout from '../Layout/CmsLayout';
+// import AssetManagement from "../pages/asset-management"
+import CmsChannelDetail from '../pages/asset-management/channeldetail/CmsChannelDetail';
 // import ViewershipComponent from './ViewershipComponent';
 // import DashboardComponent from './DashboardComponent';
 // import DashbordChannelComponent from './DashbordChannelComponent';
@@ -36,6 +38,7 @@ function AppRoutes() {
   <Route element={<CmsLayout />}>
 
     <Route path="Scheduling" element={<Scheduling />} />
+    <Route path="Asset" element={<CmsChannelDetail />} />
     {/* Add other nested routes for the "CmsLayout" here */}
   </Route>
 
