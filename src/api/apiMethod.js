@@ -45,7 +45,7 @@ export const postData = async (URL,data,headers) => {
     export const deleteInstantData = async (URL,headers) => {
       try {
         const response = await instance.delete(`${URL}`, headers);
-        console.log("dsfghjk");
+        // console.log("dsfghjk");
         return response;
       } catch (error) {
     return error.response.data

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; // Assuming you're using React Router for routing
 import "./CmsChannelDetail.scss";
 import removefile from "../../../assets/images/remove-file.svg";
@@ -6,153 +6,70 @@ import icroundsearch from "../../../assets/images/ic_round-search.svg";
 import viewlist from "../../../assets/images/view_list.svg";
 import view_module from "../../../assets/images/view_module.svg";
 import video_icon from "../../../assets/images/video-icon.png";
+import uploadicon from "../../../assets/images/uploadicon.png";
+import deleteicon from "../../../assets/images/deleteicon.png";
 import FileUpload from "../../../component/popup/FileUpload";
 import { CMS_Uplaod } from "../../../service/API_URL";
 import instance from "../../../service/axiosConfig";
-const datas = {
-  status: true,
-  message: "Data fetched successfully",
-  data: {
-    content: [
-      {
-        createdAt: 1697691378924,
-        updatedAt: 1697694621067,
-        id: 1,
-        jobId: "1697694620795-8ombxj",
-        assetType: "VIDEO",
-        videoType: "PROGRAM",
-        filename: "21mb-tree.mp4",
-        fileSize: 21657943,
-        objectKey: "partners/PKTFLM/video/program/source/21mb-tree.mp4",
-        duration: 10,
-        dateUploaded: 1697691378921,
-        dateTranscoded: null,
-        transcoded: false,
-        validated: false,
-        active: false,
-        deleted: false,
-        partner: {
-          createdAt: 1697690890552,
-          updatedAt: 1697690890552,
-          id: 1,
-          code: "PKTFLM",
-          name: "Pocket Films",
-          archived: false,
-          deleted: false,
-          industry: "Entertainment",
-          sponsorshipType: "Temorary",
-          startDate: 1697690843000,
-          endDate: 1702961243000,
-          programsCount: null,
-          postersCount: null,
-          promosCount: null,
-          fillersCount: null,
-          transcodeCount: null,
-          validateCount: null,
-          publishCount: null,
-        },
-      },
-      {
-        createdAt: 1697694441301,
-        updatedAt: 1697694621423,
-        id: 2,
-        jobId: "1697694621203-uu5fe5",
-        assetType: "VIDEO",
-        videoType: "PROGRAM",
-        filename: "earth-10mb.mp4",
-        fileSize: 9840497,
-        objectKey: "partners/PKTFLM/video/program/source/earth-10mb.mp4",
-        duration: 10,
-        dateUploaded: 1697694441297,
-        dateTranscoded: null,
-        transcoded: false,
-        validated: false,
-        active: false,
-        deleted: false,
-        partner: {
-          createdAt: 1697690890552,
-          updatedAt: 1697690890552,
-          id: 1,
-          code: "PKTFLM",
-          name: "Pocket Films",
-          archived: false,
-          deleted: false,
-          industry: "Entertainment",
-          sponsorshipType: "Temorary",
-          startDate: 1697690843000,
-          endDate: 1702961243000,
-          programsCount: null,
-          postersCount: null,
-          promosCount: null,
-          fillersCount: null,
-          transcodeCount: null,
-          validateCount: null,
-          publishCount: null,
-        },
-      },
-    ],
-    pageable: {
-      sort: {
-        empty: false,
-        sorted: true,
-        unsorted: false,
-      },
-      offset: 0,
-      pageNumber: 0,
-      pageSize: 10,
-      paged: true,
-      unpaged: false,
-    },
-    last: true,
-    totalPages: 1,
-    totalElements: 2,
-    size: 10,
-    number: 0,
-    sort: {
-      empty: false,
-      sorted: true,
-      unsorted: false,
-    },
-    first: true,
-    numberOfElements: 2,
-    empty: false,
-  },
-};
-const handleFileChange = async(e) => {
-  const URL = CMS_Uplaod;
-  const file = e.target.files[0];
-  const formData = new FormData();
-      formData.append('file', file);
-  if (file) {
-  
-    // You can perform further actions with the selected file, like uploading it to a server.
-  }
-  const params = {
-    partnerCode: 'AAJTAK',
-    assetType: 'VIDEO',
-    videoType: 'PROGRAM',
-  };
-
-  const response = await instance.post(URL, formData, {
-    params, // Include query parameters here
-    onUploadProgress: (progressEvent) => {
-      const percentCompleted = Math.round((progressEvent.loaded / progressEvent.total) * 100);
-      console.log();
-    },
-  });
-
-
-  console.log('Selected file:', response);
+import { Asset_Delete, Asset_Detail } from "../../../api/api";
 
 
 
-
-};
 function CmsChannelDetail() {
 
-  const contentArray = datas.data.content;
+  // const someValue = useSelector(state => state);
+  const assetData = JSON.parse(localStorage.getItem("AssetDetail"));
+  const AssetPartnerDetail = JSON.parse(localStorage.getItem("AssetPartnerDetail"));
+// console.log("assetData.content",assetData.content);
 
-  const programVideos = contentArray.filter(
+  const [contentArray, setContentArray] = useState(assetData.content);
+  const [activeTab, setActiveTab] = useState("PROGRAM");
+  const [categoryTab, setCategoryTab] = useState("VIDEO");
+
+
+
+  const handleFileChange = async (e) => {
+    const params = {
+      partnerId: AssetPartnerDetail?.id,
+      assetType: categoryTab,
+      videoType: categoryTab === "VIDEO" ? activeTab : null,
+      metadataType:"MOVIES"
+    }
+
+    const URL = CMS_Uplaod;
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const response = await instance.post(URL, formData, {
+        params, // Include query parameters here
+        onUploadProgress: (progressEvent) => {
+          const percentCompleted = Math.round(
+            (progressEvent.loaded / progressEvent.total) * 100
+          );
+
+        },
+
+      }
+
+     
+
+      );
+
+    
+      assetdetail(AssetPartnerDetail)
+    
+    }catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
+
+
+  const programVideos = contentArray?.filter(
     (item) => item.assetType === "VIDEO" && item.videoType === "PROGRAM"
   );
   const promosVideos = contentArray.filter(
@@ -162,20 +79,18 @@ function CmsChannelDetail() {
     (item) => item.assetType === "VIDEO" && item.videoType === "FILLERS"
   );
   const PostersData = contentArray.filter(
-    (item) => item.assetType === "POSTERS" 
+    (item) => item.assetType === "POSTERS"
   );
   const SecondaryData = contentArray.filter(
-    (item) => item.assetType === "SECONDARY" 
+    (item) => item.assetType === "SECONDARY"
   );
   const MetafileData = contentArray.filter(
     (item) => item.assetType === "METAFILE"
   );
 
 
-  const [activeTab, setActiveTab] = useState(1);
-  const [categoryTab, setCategoryTab] = useState("video");
-  const [isFileUploadOpen, setIsFileUploadOpen] = useState(false);
 
+  // console.log("Selected file:", programVideos);
   const handlecategoryTab = (tab) => {
     setCategoryTab(tab);
   };
@@ -184,18 +99,29 @@ function CmsChannelDetail() {
     setActiveTab(tab);
   };
 
-  const handleUpload = (files) => {
-    // Handle file upload in Component A
-    console.log("Uploaded files in Component A:", files);
+  const assetdelete = async (assetid) => {
+ 
+    const deleteasset = await Asset_Delete(assetid);
+// console.log(deleteasset);
+assetdetail(AssetPartnerDetail)
+  }
+  const assetdetail = async (AssetPartnerDetail) => {
+    // console.log("asdfghjkl",AssetPartnerDetail);
+    const params = {
+      partnerId: AssetPartnerDetail?.id,
+    };
+
+    const AssetDetail = await Asset_Detail(params);
+
+    if (AssetDetail.status == true) {
+      // console.log(AssetDetail.status == true);
+      localStorage.setItem("AssetDetail", JSON.stringify(AssetDetail?.data));
+  
+      setContentArray(JSON.parse(localStorage.getItem("AssetDetail"))?.content)
+    }
+    // dispatch(AssetDetailAction(AssetDetail?.data))
   };
 
-  const openFileUpload = () => {
-    setIsFileUploadOpen(true);
-  };
-
-  const closeFileUpload = () => {
-    setIsFileUploadOpen(false);
-  };
 
   return (
     <div className="content-body">
@@ -205,9 +131,9 @@ function CmsChannelDetail() {
             <div className="breadcrumbs">
               <ul>
                 <li>
-                  <a href="#">Asset Management</a>
+                  <a >Asset Management</a>
                 </li>
-                <li className="active">Asset Channel number 1</li>
+                <li className="active">{AssetPartnerDetail?.name}</li>
               </ul>
             </div>
           </div>
@@ -222,231 +148,247 @@ function CmsChannelDetail() {
           </div>
         </div>
 
-        <div className="channel-category">
-          <ul>
-            <li className={categoryTab === "video" ? "active" : ""}>
-              <a href="#" onClick={() => handlecategoryTab("video")}>
+        <div className="channel-category ">
+          <ul >
+            <li className={categoryTab === "VIDEO" ? "active" : ""}>
+              <a onClick={() => handlecategoryTab("VIDEO")}>
                 Video
               </a>
             </li>
-            <li className={categoryTab === "posters" ? "active" : ""}>
-              <a href="#" onClick={() => handlecategoryTab("posters")}>
+            <li className={categoryTab === "POSTERS" ? "active" : ""}>
+              <a onClick={() => handlecategoryTab("POSTERS")}>
                 Posters
               </a>
             </li>
-            <li className={categoryTab === "secondary" ? "active" : ""}>
-              <a href="#" onClick={() => handlecategoryTab("secondary")}>
+            <li className={categoryTab === "SECONDARY" ? "active" : ""}>
+              <a onClick={() => handlecategoryTab("SECONDARY")}>
                 Secondary
               </a>
             </li>
-            <li className={categoryTab === "metafile" ? "active" : ""}>
-              <a href="#" onClick={() => handlecategoryTab("metafile")}>
+            <li className={categoryTab === "METAFILE" ? "active" : ""}>
+              <a onClick={() => handlecategoryTab("METAFILE")}>
                 Metafile
               </a>
             </li>
+
+            <button to="/channel-actions" className="btn btn-light-red-ml-auto">
+              Actions
+            </button>
           </ul>
         </div>
 
-        {categoryTab === "video" && (
+        {categoryTab === "VIDEO" && (
           <div className="channel-content">
             <div className="channel-top">
               <div className="left-side">
                 <ul className="tabs">
                   <li
-                    className={`tab-a ${activeTab === 1 ? "active" : ""}`}
-                    onClick={() => handleTabClick(1)}
+                    className={`tab-a ${activeTab === "PROGRAM" ? "active" : ""}`}
+                    onClick={() => handleTabClick("PROGRAM")}
                   >
                     Program
                   </li>
                   <li
-                    className={`tab-a ${activeTab === 2 ? "active" : ""}`}
-                    onClick={() => handleTabClick(2)}
+                    className={`tab-a ${activeTab === "PROMOS" ? "active" : ""}`}
+                    onClick={() => handleTabClick("PROMOS")}
                   >
                     Promos
                   </li>
                   <li
-                    className={`tab-a ${activeTab === 3 ? "active" : ""}`}
-                    onClick={() => handleTabClick(3)}
+                    className={`tab-a ${activeTab === "FILLERS" ? "active" : ""}`}
+                    onClick={() => handleTabClick("FILLERS")}
                   >
                     Fillers
                   </li>
                 </ul>
               </div>
               <div className="right-side">
-              <input
-        type="file"
-        id="fileInput"
-        style={{ display: 'none' }}
-        onChange={(e)=>handleFileChange(e)}
-      />
-                <a className="btn btn-red"  onClick={() => document.getElementById('fileInput').click()}>
-                  Upload
+                <input
+                  type="file"
+                  id="fileInput"
+                  style={{ display: "none" }}
+                  onChange={(e) => handleFileChange(e)}
+                />
+                <a
+                  className="mx-2"
+                  onClick={() => document.getElementById("fileInput").click()}
+                >
+                  <img src={uploadicon} />
                 </a>
-                <Link to="/channel-actions" className="btn btn-light-red">
-                  Actions
-                </Link>
-                <a href="#" className="btn btn-icon">
+
+                {/* <a  className="btn btn-icon">
                   <img src={removefile} alt="" />
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="content-wrapper">
               <div
                 id="tab-1"
-                className={`tab-content ${activeTab === 1 ? "active" : ""}`}
+                className={`tab-content ${activeTab === "PROGRAM" ? "active" : ""}`}
               >
                 <div class="video-channel-list">
                   {programVideos &&
-                    programVideos.map(() => {
+                    programVideos.map((data) => {
                       return (
                         <div class="block">
+                          <button  onClick={()=>assetdelete(data.id)} className="delete-button"><img src={deleteicon}/></button>
                           <img src={video_icon} alt="" />
-                          <label>Video 1</label>
+                          <label>{data.filename}</label>
                         </div>
                       );
                     })}
-
-                 
                 </div>
               </div>
               <div
                 id="tab-2"
-                className={`tab-content ${activeTab === 2 ? "active" : ""}`}
+                className={`tab-content ${activeTab === "PROMOS" ? "active" : ""}`}
               >
-           {promosVideos &&
-                    promosVideos.map(() => {
-                      return (
-                        <div class="block">
-                          <img src={video_icon} alt="" />
-                          <label>Video 1</label>
-                        </div>
-                      );
-                    })}
+                {promosVideos &&
+                  promosVideos.map(() => {
+                    return (
+                      <div class="block">
+                        <img src={video_icon} alt="" />
+                        <label>Video 1</label>
+                      </div>
+                    );
+                  })}
               </div>
               <div
                 id="tab-3"
-                className={`tab-content ${activeTab === 3 ? "active" : ""}`}
+                className={`tab-content ${activeTab === "FILLERS" ? "active" : ""}`}
               >
-               {fillersVideos &&
-                    fillersVideos.map(() => {
-                      return (
-                        <div class="block">
-                          <img src={video_icon} alt="" />
-                          <label>Video 1</label>
-                        </div>
-                      );
-                    })}
+                {fillersVideos &&
+                  fillersVideos.map(() => {
+                    return (
+                      <div class="block">
+                        <img src={video_icon} alt="" />
+                        <label>Video 1</label>
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           </div>
         )}
-        {categoryTab === "posters" && (
+        {categoryTab === "POSTERS" && (
           <div className="channel-content">
             <div className="channel-top">
               <div className="left-side"></div>
               <div className="right-side">
-                <a className="btn btn-red" onClick={openFileUpload}>
-                  Upload
+                <input
+                  type="file"
+                  id="fileInput"
+                  style={{ display: "none" }}
+                  onChange={(e) => handleFileChange(e,)}
+                />
+                <a
+                  className="mx-2"
+                  onClick={() => document.getElementById("fileInput").click()}
+                >
+                  <img src={uploadicon} />
                 </a>
-                <Link to="/channel-actions" className="btn btn-light-red">
+                {/* <Link to="/channel-actions" className="btn btn-light-red">
                   Actions
                 </Link>
-                <a href="#" className="btn btn-icon">
+                <a  className="btn btn-icon">
                   <img src={removefile} alt="" />
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="content-wrapper">
-             
-                <div class="video-channel-list">
+              <div class="video-channel-list">
                 {PostersData &&
-                    PostersData.map(() => {
-                      return (
-                        <div class="block">
-                          <img src={video_icon} alt="" />
-                          <label>Video 1</label>
-                        </div>
-                      );
-                    })}
-               
-                </div>
-         
-             
+                  PostersData.map(() => {
+                    return (
+                      <div class="block">
+                        <img src={video_icon} alt="" />
+                        <label>Video 1</label>
+                      </div>
+                    );
+                  })}
+              </div>
             </div>
           </div>
         )}
-        {categoryTab === "secondary" && (
+        {categoryTab === "SECONDARY" && (
           <div className="channel-content">
             <div className="channel-top">
               <div className="left-side"></div>
               <div className="right-side">
-                <a className="btn btn-red" onClick={openFileUpload}>
-                  Upload
+                <input
+                  type="file"
+                  id="fileInput"
+                  style={{ display: "none" }}
+                  onChange={(e) => handleFileChange(e)}
+                />
+                <a
+                  className="mx-2"
+                  onClick={() => document.getElementById("fileInput").click()}
+                >
+                  <img src={uploadicon} />
                 </a>
-                <Link to="/channel-actions" className="btn btn-light-red">
+                {/* <Link to="/channel-actions" className="btn btn-light-red">
                   Actions
                 </Link>
-                <a href="#" className="btn btn-icon">
+                <a  className="btn btn-icon">
                   <img src={removefile} alt="" />
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="content-wrapper">
-             
-             <div class="video-channel-list">
-             {SecondaryData &&
-                 SecondaryData.map(() => {
-                   return (
-                     <div class="block">
-                       <img src={video_icon} alt="" />
-                       <label>Video 1</label>
-                     </div>
-                   );
-                 })}
-            
-             </div>
-      
-          
-         </div>
+              <div class="video-channel-list">
+                {SecondaryData &&
+                  SecondaryData.map(() => {
+                    return (
+                      <div class="block">
+                        <img src={video_icon} alt="" />
+                        <label>Video 1</label>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
           </div>
         )}
-        {categoryTab === "metafile" && (
+        {categoryTab === "METAFILE" && (
           <div className="channel-content">
             <div className="channel-top">
               <div className="left-side"></div>
               <div className="right-side">
-                <a className="btn btn-red" onClick={openFileUpload}>
-                  Upload
+                <input
+                  type="file"
+                  id="fileInput"
+                  style={{ display: "none" }}
+                  onChange={(e) => handleFileChange(e)}
+                />
+                <a
+                  className="mx-2"
+                  onClick={() => document.getElementById("fileInput").click()}
+                >
+                  <img src={uploadicon} />
                 </a>
-                <Link to="/channel-actions" className="btn btn-light-red">
+                {/* <Link to="/channel-actions" className="btn btn-light-red">
                   Actions
                 </Link>
-                <a href="#" className="btn btn-icon">
+                <a  className="btn btn-icon">
                   <img src={removefile} alt="" />
-                </a>
+                </a> */}
               </div>
             </div>
             <div class="video-channel-list">
-             {MetafileData &&
-                 MetafileData.map(() => {
-                   return (
-                     <div class="block">
-                       <img src={video_icon} alt="" />
-                       <label>Video 1</label>
-                     </div>
-                   );
-                 })}
-            
-             </div>
+              {MetafileData &&
+                MetafileData.map((data) => {
+                  return (
+                    <div class="block">
+                      <img src={video_icon} alt="" />
+                      <label>Video 1</label>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         )}
-        {isFileUploadOpen && (
-          <FileUpload
-            onUpload={handleUpload}
-            acceptedFormats={[".pdf", ".doc"]}
-            onClose={closeFileUpload}
-          />
-        )}
+
       </div>
     </div>
   );

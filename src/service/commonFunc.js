@@ -31,3 +31,8 @@ export function formatNumber(number) {
   const scaled = number / scale;
   return scaled.toFixed(1) + suffix;
 }
+
+export const DateStamp =(timestamp) => {
+  
+ return new Date(timestamp).toLocaleDateString();
+}

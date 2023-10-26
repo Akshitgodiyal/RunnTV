@@ -4,57 +4,72 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker-cssmodules.css'; // Use this CSS module
 import './AddPartnerpopup.scss';
-import { Partner_create, Partner_update } from '../../api/api'; // Assuming you have an API for creating and updating partners
+import { Partner_create, Partner_update } from '../../api/api';
 
 const AddPartnerpopup = ({ show, handleClose, isEditing, partnerData }) => {
     const [partnerName, setPartnerName] = useState('');
     const [partnerId, setPartnerId] = useState('');
     const [startDate, setStartDate] = useState(null);
-    const [endDate, setEndDate] = useState(null);
 
+    const [startTime, setStartTime] = useState(null);
+    const [endDate, setEndDate] = useState(null);
+    const [endTime, setEndTime] = useState(null);
+// console.log(startTime);
     useEffect(() => {
         if (isEditing) {
-            // Pre-populate the form fields with partnerData if in edit mode
             setPartnerName(partnerData.name);
             setPartnerId(partnerData.code);
-            setStartDate(new Date(partnerData.createdAt));
-            setEndDate(new Date(partnerData.updatedAt));
+            setStartDate(new Date(partnerData.startDate));
+            setEndDate(new Date(partnerData.endDate));
+            const startDateTime = new Date(partnerData.startDate);
+            const endDateTime = new Date(partnerData.endDate);
+    
+            const startTime = startDateTime.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false // Use 24-hour format
+            });
+    
+            const endTime = endDateTime.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false // Use 24-hour format
+            });
+    
+            setStartTime(startTime);
+            setEndTime(endTime);
         } else {
-            // Reset the form fields when in add mode
+         
             setPartnerName('');
             setPartnerId('');
             setStartDate(null);
             setEndDate(null);
+            setStartTime(null); // Set it to an empty string, not null
+            setEndTime(null);
         }
     }, [isEditing, partnerData]);
 
     const addPartner = async () => {
         if (isEditing) {
-            // Handle the update logic here
             const updatedPartnerData = {
-
                 name: partnerName,
-                startDate: startDate.getTime(),
-                endDate: endDate.getTime(),
+                startDate: new Date(`${startDate.toDateString()} ${startTime}`).getTime(),
+                endDate: new Date(`${endDate.toDateString()} ${endTime}`).getTime(),
             };
-           
-
-
-            await Partner_update(updatedPartnerData,partnerData.id);
+            await Partner_update(updatedPartnerData, partnerData.id);
         } else {
-            // Handle the create logic here
             const newPartnerData = {
                 code: partnerId,
                 name: partnerName,
-                startDate: startDate ? startDate.getTime() : null,
-                endDate: endDate ? endDate.getTime() : null,
+                startDate: startDate ? new Date(`${startDate.toDateString()} ${startTime}`).getTime() : null,
+                endDate: endDate ? new Date(`${endDate.toDateString()} ${endTime}`).getTime() : null,
             };
             await Partner_create(newPartnerData);
         }
-        handleClose(); // Close the modal after adding/editing
+        handleClose();
     };
-
 
     return (
         <Modal show={show} onHide={handleClose}>
@@ -75,28 +90,63 @@ const AddPartnerpopup = ({ show, handleClose, isEditing, partnerData }) => {
                     <Form.Group>
                         <Form.Label>Partner Code <span style={{ color: "red" }}>*</span></Form.Label>
                         <Form.Control
-    placeholder="Enter Partner’s code"
-    type="text"
-    value={partnerId}
-    onChange={(e) => setPartnerId(e.target.value)}
-    disabled={isEditing} // Disable in edit mode
-/>
+                            placeholder="Enter Partner’s code"
+                            type="text"
+                            value={partnerId}
+                            onChange={(e) => setPartnerId(e.target.value)}
+                            disabled={isEditing}
+                        />
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Start Date <span style={{ color: "red" }}>*</span></Form.Label>
-                        <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            minDate={new Date()} // Disable all back dates
-                        />
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
+                            <DatePicker
+                                selected={startDate || null}
+                                onChange={(date) => setStartDate(date)}
+                                dateFormat="MM/dd/yyyy"
+                                placeholderText="MM/dd/yyyy"
+                                isClearable  // This allows the user to clear the selected date
+                            />
+
+<Form.Control
+    placeholder="HH:MM"
+    className="starttime"
+    type="time"
+    value={startTime || "00:00"} // Use '00:00' as the default time
+    onChange={(e) => {
+        const inputTime = e.target.value;
+        setStartTime(inputTime);
+    }}
+/>
+                           
+                        </div>
+
+
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>End Date <span style={{ color: "red" }}>*</span></Form.Label>
-                        <DatePicker
-                            selected={endDate}
-                            onChange={(date) => setEndDate(date)}
-                            minDate={new Date()} // Disable all back dates
-                        />
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <DatePicker
+                                selected={endDate || null}
+                                onChange={(date) => setEndDate(date)}
+                                dateFormat="MM/dd/yyyy"
+                                placeholderText="MM/dd/yyyy"
+                                isClearable  // This allows the user to clear the selected date
+                            />
+
+                            <Form.Control
+                                isClearable  // This allows the user to clear the selected date
+                                placeholder='HH:MM'
+                                className='starttime'
+                                type="time"
+                                defaultValue={endTime || "00:00"}
+                                onChange={(e) => {
+                                    const inputTime = e.target.value;
+                                    setEndTime(inputTime);
+                                }}
+                            />
+                        </div>
                     </Form.Group>
                 </Form>
             </Modal.Body>

@@ -1,6 +1,5 @@
 import axios from "axios";
-
-import { Logout_URL, Partnercreate_URL, Partnerdelete_URL, Partnerlist_URL, Partnersearch_URL, Partnerupdate_URL, RefreshToken_URL, ViewershipMap_URL, ViewershipTableChild_URL, ViewershipTablehead_URL } from "../service/API_URL";
+import { AssetDelete_URL, AssetPartner_URL, AssetPublish_URL, AssetTranscode_URL, AssetValidate_URL, Logout_URL, Partnercreate_URL, Partnerdelete_URL, Partnerlist_URL, Partnersearch_URL, Partnerupdate_URL, RefreshToken_URL, ViewershipMap_URL, ViewershipTableChild_URL, ViewershipTablehead_URL } from "../service/API_URL";
 import { deleteInstantData, getInstantData, postData, postInstantData } from "./apiMethod";
 import { UUID_CODE, deviceType } from "../utility/deviceid";
 const refreshToken = localStorage.getItem("refreshToken")
@@ -144,7 +143,7 @@ export const ViewershipTablehead = async (data,setshowLoader) => {
     }
 
   };
-
+  
   export const Partner_delete = async (param) => {
     let URL = Partnerdelete_URL+"/"+param
     
@@ -176,28 +175,98 @@ export const ViewershipTablehead = async (data,setshowLoader) => {
 
   export const Partner_create = async (data) => {
     let URL = Partnercreate_URL
-  
+    
     try {
       const response = await postInstantData(URL, data)
-      console.log('POST response:', response);
+      // console.log('POST response:', response);
       return response;
     } catch (error) {
       
-    alert("Something wents wrong, Please try again.");
+      alert("Something wents wrong, Please try again.");
     }
 
   };
-
+ 
   export const Partner_archive = async (param) => {
     let URL = Partnerdelete_URL+"/"+param+"/archive"
     
     try {
       const response = await postInstantData(URL)
  return response
-   
-    } catch (error) {
-      return error
-    // alert("Something wents wrong, Please try again.");
-    }
+ 
+} catch (error) {
+  return error
+  // alert("Something wents wrong, Please try again.");
+}
 
-  };
+};
+export const Asset_Detail = async (param) => {
+  let URL = AssetPartner_URL
+  // console.log(param);
+
+let params= param
+  try {
+    const response = await getInstantData(URL ,{params})
+// console.log("response",response);
+    return response;
+  } catch (error) {
+    // window.location.href = "/"
+  // alert("Something wents wrong, Please try again.");
+  }
+
+};
+
+
+export const Asset_Delete = async (param) => {
+  let URL = AssetDelete_URL+"/"+param
+  
+  try {
+    const response = await deleteInstantData(URL)
+return response
+
+} catch (error) {
+return error
+// alert("Something wents wrong, Please try again.");
+}
+
+};
+
+export const AssetTranscode = async (data) => {
+  let URL = AssetTranscode_URL
+  
+  try {
+    const response = await postInstantData(URL, data)
+    // console.log('POST response:', response);
+    return response;
+  } catch (error) {
+    
+    alert("Something wents wrong, Please try again.");
+  }
+
+};
+export const AssetValidate = async (data) => {
+  let URL = AssetValidate_URL
+  
+  try {
+    const response = await postInstantData(URL, data)
+    // console.log('POST response:', response);
+    return response;
+  } catch (error) {
+    
+    alert("Something wents wrong, Please try again.");
+  }
+
+};
+export const AssetPublish= async (data) => {
+  let URL = AssetPublish_URL
+  
+  try {
+    const response = await postInstantData(URL, data)
+    // console.log('POST response:', response);
+    return response;
+  } catch (error) {
+    
+    alert("Something wents wrong, Please try again.");
+  }
+
+};

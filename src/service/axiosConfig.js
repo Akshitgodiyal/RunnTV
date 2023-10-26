@@ -3,7 +3,7 @@ import { refreshTokenAPI } from "../api/api";
 
 const instance = axios.create({
     baseURL: process.env.REACT_APP_REFRESHTOKEN_URL,
-    withCredentials: true,
+    withCredentials: false,
 });
 
 instance.interceptors.request.use((config) => {

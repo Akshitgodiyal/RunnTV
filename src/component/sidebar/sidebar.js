@@ -32,7 +32,7 @@ console.log(location.pathname);
             </div>
             <div className="menu">
                 <ul>
-                <li className={location.pathname === "/Asset" ? 'active' : ''}>
+                <li className={location.pathname === "/Asset" ||"/CmsChannelDetail" ? 'active' : ''}>
                         <Link to="/Asset" >
                             <img src={asseticon} alt="Asset Icon" /><span>Asset Management</span>
                         </Link>

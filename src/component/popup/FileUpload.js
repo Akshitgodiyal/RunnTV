@@ -21,7 +21,7 @@ function FileUpload({ onUpload, acceptedFormats }) {
 
       // Define query parameters in the request configuration
       const params = {
-        partnerCode: 'AAJTAK',
+        partnerCode: '1',
         assetType: 'VIDEO',
         videoType: 'PROGRAM',
       };

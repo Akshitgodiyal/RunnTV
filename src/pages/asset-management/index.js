@@ -9,74 +9,22 @@ import view_module from "../../assets/images/view_module.svg";
 import { Card, Dropdown, DropdownButton } from "react-bootstrap";
 import rightarrow from "../../assets/images/rightvector.png";
 import leftarrow from "../../assets/images/Vector.png";
+import editicon from "../../assets/images/editicon.png";
+import archiveicon from "../../assets/images/archiveicon.png";
+import deleteicon from "../../assets/images/deleteicon.png";
 import AddPartnerpopup from "../../component/popup/AddPartnerpopup";
 
-import { Partner_archive, Partner_delete, Partner_list, Partner_search } from "../../api/api";
+import {
+  Asset_Detail,
+  Partner_archive,
+  Partner_delete,
+  Partner_list,
+  Partner_search,
+} from "../../api/api";
 import filter_alt from "../../assets/images/sortarrow.png";
-const PartnerDatas = [
-  {
-    status: true,
-    message: "Data fetched successfully",
-    data: [
-      {
-        createdAt: 1694660445315,
-        updatedAt: 1694660445315,
-        id: 1,
-        code: "NAVBHT",
-        name: "Navbharat Times",
-      },
-      {
-        createdAt: 1694660445315,
-        updatedAt: 1694660445315,
-        id: 2,
-        code: "PKTFLM",
-        name: "Pocket Films",
-      },
-      {
-        createdAt: 1694660445315,
-        updatedAt: 1694660445315,
-        id: 3,
-        code: "SUPFLM",
-        name: "Super Films",
-      },
-      {
-        createdAt: 1694660445315,
-        updatedAt: 1694660445315,
-        id: 4,
-        code: "NUNUTV",
-        name: "Numnum Films",
-      },
-      {
-        createdAt: 1697045534078,
-        updatedAt: 1697045534078,
-        id: 5,
-        code: "DISNEY",
-        name: "Disney Network",
-      },
-      {
-        createdAt: 1697045634615,
-        updatedAt: 1697045634615,
-        id: 6,
-        code: "AAJTAK",
-        name: "Aaj tak Network",
-      },
-      {
-        createdAt: 1697132316355,
-        updatedAt: 1697132316355,
-        id: 8,
-        code: "NEWSNATION",
-        name: "News Nation Network",
-      },
-      {
-        createdAt: 1697135480408,
-        updatedAt: 1697135480408,
-        id: 9,
-        code: "ULTIMATE",
-        name: "Ultimate Network",
-      },
-    ],
-  },
-];
+import { useDispatch } from "react-redux";
+import { AssetDetailAction } from "../../Redux/slices";
+
 
 function AssetManagement() {
   const [activeView, setActiveView] = useState("grid");
@@ -111,7 +59,7 @@ function AssetManagement() {
   };
 
   // List view
-  const itemsPerPage = 6;
+  const itemsPerPage = 4;
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -163,7 +111,7 @@ function AssetManagement() {
     // Call your search API with the searchQuery value
     // You can use libraries like Axios or fetch for making the API request
     // For this example, we'll use a simple console.log to demonstrate
-    console.log("Searching for:", searchQuery);
+    // console.log("Searching for:", searchQuery);
     partnerSearch(searchQuery);
   };
 
@@ -181,9 +129,27 @@ function AssetManagement() {
   const partnerArchive = async (data) => {
     const partnerDelete = await Partner_archive(data);
 
-   console.log(partnerDelete);
+    // console.log(partnerDelete);
   };
+  const dispatch = useDispatch();
 
+
+  const partnerdetail = async (assetdetails) => {
+    // console.log("asdfghjkl",assetdetail);
+    const params = {
+      partnerId: assetdetails.id,
+    };
+
+    const AssetDetail = await Asset_Detail(params);
+
+if(AssetDetail.status == true){
+  console.log(AssetDetail.status == true);
+  localStorage.setItem("AssetDetail", JSON.stringify(AssetDetail?.data));
+  localStorage.setItem("AssetPartnerDetail", JSON.stringify(assetdetails));
+  window.location.href = "/CmsChannelDetail"
+}
+    // dispatch(AssetDetailAction(AssetDetail?.data))
+  };
   const sortOrderEvent = () => {};
   return (
     <div className="content-body">
@@ -239,7 +205,11 @@ function AssetManagement() {
           {activeView === "grid" ? (
             PartnerData.length != 0 ? (
               PartnerData.map((folder, index) => (
-                <div key={folder.id} className="floder-block">
+                <div
+                  
+                  key={folder.id}
+                  className="floder-block"
+                >
                   <Card>
                     <Card.Header>
                       <div className="d-flex justify-content-between">
@@ -269,16 +239,16 @@ function AssetManagement() {
                                 handleDropdownSelect("option1", index)
                               }
                             >
-                              <img src={floderaddicon} alt="" /> Edit
+                              <img src={editicon} alt="" /> Edit
                             </Dropdown.Item>
                             <Dropdown.Item
                               eventKey="option2"
                               onSelect={() =>
                                 handleDropdownSelect("option2", index)
                               }
-                              onClick={()=>partnerArchive(folder.id)}
+                              onClick={() => partnerArchive(folder.id)}
                             >
-                              <img src={floderaddicon} alt="" /> Archive
+                              <img src={archiveicon} alt="" /> Archive
                             </Dropdown.Item>
                             <Dropdown.Item
                               eventKey="option3"
@@ -289,19 +259,21 @@ function AssetManagement() {
                                 partnerDelete(folder.id);
                               }}
                             >
-                              <img src={floderaddicon} alt="" /> Delete
+                              <img src={deleteicon} alt="" /> Delete
                             </Dropdown.Item>
                           </Dropdown.Menu>
                         </Dropdown>
                       </div>
                     </Card.Header>
-                    <Card.Body>
+                    <Card.Body onClick={() => {
+                    partnerdetail(folder);
+                  }}>
                       {/* Your card body content goes here */}
                       Programs :<b>{folder.programsCount}</b>
                       <p className="my-1">
                         <span className="mx-1">
-                          {" "}
-                          Transcoded{" "}
+                      
+                          Transcoded
                           <p className=" my-1 text-center">
                             <b>{folder.transcodeCount}</b>
                           </p>
@@ -336,15 +308,15 @@ function AssetManagement() {
                 </div>
               ))
             ) : (
-              "Match not found"
+              "Data not found"
             )
           ) : (
             <div className="table table-checkbox">
               <table className="listTable text-center">
-                <thead >
+                <thead>
                   <tr>
-                    <th style={{width:"20%"}}>
-                      FILE NAME{" "}
+                    <th style={{ width: "20%",marginLeft:"20px" }}>
+                      PARTNER NAME{" "}
                       <a
                         className="filter-icon mx-2"
                         onClick={() => sortOrderEvent("viewKey")}
@@ -352,7 +324,16 @@ function AssetManagement() {
                         <img src={filter_alt} alt="Filter" />
                       </a>
                     </th>
-                    <th style={{width:"35%", textAlign:"center"}}>
+                    <th style={{ width: "15%", textAlign: "center" }}>
+                      LAST ACTIVITY
+                      <a
+                        className="filter-icon mx-2"
+                        onClick={() => sortOrderEvent("viewKey")}
+                      >
+                        <img src={filter_alt} alt="Filter" />
+                      </a>
+                    </th>
+                    <th style={{ width: "33%", textAlign: "center" }}>
                       PROGRAMS{" "}
                       <a
                         className="filter-icon mx-2"
@@ -361,7 +342,7 @@ function AssetManagement() {
                         <img src={filter_alt} alt="Filter" />
                       </a>
                     </th>
-                    <th style={{width:"15%"}}>
+                    <th style={{ width: "10%" }}>
                       POSTERS{" "}
                       <a
                         className="filter-icon mx-2"
@@ -370,7 +351,7 @@ function AssetManagement() {
                         <img src={filter_alt} alt="Filter" />
                       </a>
                     </th>
-                    <th style={{width:"15%"}}>
+                    <th style={{ width: "10%" }}>
                       PROMOS{" "}
                       <a
                         className="filter-icon mx-2"
@@ -379,7 +360,7 @@ function AssetManagement() {
                         <img src={filter_alt} alt="Filter" />
                       </a>
                     </th>
-                    <th style={{width:"10%"}}>
+                    <th style={{ width: "10%" }}>
                       FILLERS{" "}
                       <a
                         className="filter-icon mx-2"
@@ -388,22 +369,25 @@ function AssetManagement() {
                         <img src={filter_alt} alt="Filter" />
                       </a>
                     </th>
-                    <th style={{width:"5%"}}>
-                      OPTION{" "}
+                    <th style={{ width: "2%" }}>
+                    
                       <a
                         className="filter-icon mx-2"
                         onClick={() => sortOrderEvent("viewKey")}
-                      >
-                      
-                      </a>
+                      ></a>
                     </th>
                   </tr>
                 </thead>
                 {currentData.length != 0 ? (
                   <tbody>
                     {currentData.map((row, index) => (
-                      <tr key={row.id}>
-                        <td style={{textAlign:"left"}}>
+                       <tr className={index % 2 === 0 ? "even" : "odd"}
+                        key={row.id}
+                        onClick={() => {
+                          partnerdetail(row);
+                        }}
+                      >
+                        <td style={{ textAlign: "left" }}>
                           <img
                             style={{ height: "25px" }}
                             src={floderEmpty}
@@ -411,7 +395,8 @@ function AssetManagement() {
                           />
                           <span> {row.name}</span>
                         </td>
-                        <td >
+                        <td>{new Date(row.updatedAt).toLocaleString()}</td>
+                        <td>
                           Total : {row.programsCount}
                           <p>
                             (Transcoded:{row.transcodeCount}, Validated:
@@ -419,6 +404,7 @@ function AssetManagement() {
                           </p>
                         </td>
                         <td>{row.postersCount}</td>
+                       
                         <td>{row.promosCount}</td>
                         <td>{row.fillersCount}</td>
                         <td>
@@ -447,16 +433,16 @@ function AssetManagement() {
                                 }
                                 onClick={() => openEditPartnerPopup(row)}
                               >
-                                <img src={floderaddicon} alt="" /> Edit
+                                <img src={editicon} alt="" /> Edit
                               </Dropdown.Item>
                               <Dropdown.Item
                                 eventKey="option2"
                                 onSelect={() =>
                                   handleDropdownSelect("option2", index)
                                 }
-                                onClick={()=>partnerArchive(row.id)}
+                                onClick={() => partnerArchive(row.id)}
                               >
-                                <img src={floderaddicon} alt="" /> Archive
+                                <img src={archiveicon} alt="" /> Archive
                               </Dropdown.Item>
                               <Dropdown.Item
                                 eventKey="option3"
@@ -466,9 +452,8 @@ function AssetManagement() {
                                 onClick={() => {
                                   partnerDelete(row.id);
                                 }}
-                             
                               >
-                                <img src={floderaddicon} alt="" /> Delete
+                                <img src={deleteicon} alt="" /> Delete
                               </Dropdown.Item>
                             </Dropdown.Menu>
                           </Dropdown>

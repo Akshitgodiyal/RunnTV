@@ -1,4 +1,4 @@
-export const baseURL = "https://a3ee-49-249-156-2.ngrok-free.app/runtv/v1"
+export const baseURL = "http://34.229.203.142/runtv/v1"
 export const Login_URL = `${baseURL}/auth/login`;
 export const ForgetPassword_URL = `${baseURL}/password/resetlink`
 export const ResetPassword_URL = `${baseURL}/auth/password/reset`
@@ -13,3 +13,8 @@ export const Partnersearch_URL = `${baseURL}/partners/search`
 export const Partnerdelete_URL = `${baseURL}/partners`
 export const Partnerupdate_URL = `${baseURL}/partners`
 export const Partnercreate_URL = `${baseURL}/partners`
+export const AssetPartner_URL = `${baseURL}/assets/filter`
+export const AssetDelete_URL = `${baseURL}/assets`
+export const AssetTranscode_URL = `${baseURL}/assets/transcode`
+export const AssetValidate_URL = `${baseURL}/assets/validate`
+export const AssetPublish_URL = `${baseURL}/assets/toggle-publish`

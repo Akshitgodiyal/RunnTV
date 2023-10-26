@@ -1,6 +1,7 @@
 .action-category { 
         width: 100%;
     ul {
+        justify-content: end;
         padding: 0;
         list-style: none;
         display: flex;
@@ -58,7 +59,7 @@
         th,td {
             text-align: left; 
             vertical-align: top;
-            background-color: #ffffff;
+            // background-color: #ffffff;
         }
         td {
             font-size: 14px;
@@ -117,5 +118,83 @@
             } 
             
         }
+        select{
+            background: transparent;
+        }
+    }
+
+
+    .complete{
+        width: fit-content;
+padding: 6px;
+border-radius: 12px;
+background: #F0F6F3;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: left;
+         color: #10552D;
+
+    }
+    .error{
+        // margin: auto;
+        width: fit-content;
+        padding: 6px;
+border-radius: 12px;
+background: #FAEAE9;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: left;
+         color: #C93C00;
+    
+
+   
+    }
+    .pending{
+        width: fit-content;
+        padding: 6px;
+border-radius: 12px;
+background: #F0F4F6;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: left;
+         color: #7C97A5;
+    }
+ 
+    .processing{
+        // margin: auto;
+        width: fit-content;
+        padding: 6px;
+        border-radius: 12px;
+        background: #FCF8F1;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+                letter-spacing: 0em;
+                text-align: left;
+                 color: #E96C45;
+    }
+    .OverRiden{
+        // margin: auto;
+        width: fit-content;
+        padding: 6px;
+        border-radius: 12px;
+        background: #FFF8E0;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+                letter-spacing: 0em;
+                text-align: left;
+                 color: black;
     }
 } 

@@ -195,7 +195,7 @@ table {
     th,td {
         text-align: center; 
         vertical-align: top;
-        background-color: #ffffff;
+        // background-color: #ffffff;
     }
     td {
         font-size: 14px;
@@ -304,9 +304,9 @@ table {
     font-size: 14px;
     font-weight: 700;
     line-height: 15px;
-    letter-spacing: 0.10000000149011612px;
+ 
     text-align: left;
-    
+    padding: 5px;
     min-width: auto;
     padding: 0px;
     position: absolute;
@@ -342,7 +342,7 @@ text-align: left;
 
 .card-body{
     background: #ECECEC;
-
+cursor: pointer;
 }
 }
 

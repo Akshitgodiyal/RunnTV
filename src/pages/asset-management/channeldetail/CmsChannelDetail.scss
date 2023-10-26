@@ -134,8 +134,9 @@
     gap: 20px;
     flex-wrap: wrap;
     .block {
-        width: 80px;
-        height: 80px;
+       
+        // width: 80px;
+        // height: 80px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -145,4 +146,20 @@
             margin-bottom: 5px;
         }
     }
+}
+.btn-light-red-ml-auto{
+    background: #FAEAE9 !important;
+    border-radius: 8px !important;
+    color: #D22F26 !important;
+    margin-left: auto !important;
+    border: #D22F26 1px solid !important;
+  margin: 0px 5% ;
+    font-weight: 600 !important;
+}
+.delete-button{
+    width: 10px;
+    position: relative;
+    margin-left: auto;
+    background: transparent;
+    border: navajowhite;
 }
